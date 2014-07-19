@@ -1,49 +1,16 @@
-<%= form_for @education, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @education, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :empno, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :empno, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :edtype, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :edtype, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :degyear, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :degyear, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :deg, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :deg, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :special, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :special, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :verified, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.check_box :verified, :class => 'check_box' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :verby, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :verby, :class => 'text_field' %>
-    </div>
+    <%= f.input :empno,label: "Employee Number",collection: ["#"]%>
+    <%= f.input :edtype,label: "Education Type",collection: ["#"]%>
+    <%= f.input :degyear,label: "Degree Year",collection: 1947...2020%>
+    <%= f.input :deg,label: "Degree",collection: ["#"]%>
+    <%= f.input :special,label: "Specialization"%>
+    <%= f.input :verified,label: "Verified"%>
+    <%= f.input :verby,label: "Verified By",collection: ["#"]%>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.button :submit ,:class => 'btn btn-primary'%>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 educations_path, :class => 'btn' %>
   </div>

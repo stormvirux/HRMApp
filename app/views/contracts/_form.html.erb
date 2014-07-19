@@ -1,61 +1,18 @@
-<%= form_for @contract, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @contract, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :empno, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :empno, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :htype, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :htype, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :status, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :status, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :cstart, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :cstart, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :cend, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :cend, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :pstart, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :pstart, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :pend, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :pend, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :nameiqama, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :nameiqama, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :proiqama, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :proiqama, :class => 'text_field' %>
-    </div>
+    <%= f.input :empno, label: 'Employee Number',collection:["#"]%>
+    <%= f.input :htype, label: 'Hire Type',collection: ["#"]%>
+    <%= f.input :status, label: 'Status',collection: [["Single","single"],["Family","family"]], as: :radio_buttons%>
+    <%= f.input :cstart, label: 'Contract Start Date'%>
+    <%= f.input :cend, label: 'Contract End Date'%>
+    <%= f.input :pstart, label: 'Probation Start Date'%>
+    <%= f.input :pend, label: 'Probation End Date'%>
+    <%= f.input :nameiqama, label: 'Name in Iqama'%>
+    <%= f.input :proiqama, label: 'Profession in Iqama'%>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.button :submit ,:class => 'btn btn-primary'%>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 contracts_path, :class => 'btn' %>
   </div>

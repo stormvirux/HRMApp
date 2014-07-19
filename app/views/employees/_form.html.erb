@@ -1,170 +1,42 @@
-<%= form_for @employee, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @employee, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :empno, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :empno, :class => 'text_field' %>
-    </div>
+    <%= f.input :empno,label:"Employee No" %>
+    <%= f.input :first_name,label:"First Name" %>
+    <%= f.input :middle_name,label:"Middle Name" %>
+    <%= f.input :last_name,label:"Last name" %>
+    <%= f.input :gender,collection:['male','female'],label:"Gender", as: :radio, :class=> 'checkbox inline'%>
+    <%= f.input :dob,label:"Date of Birth" %>
   </div>
   <div class="control-group">
-    <%= f.label :first_name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :first_name, :class => 'text_field' %>
-    </div>
+    <%= f.input :passportno,label:"Passport Number" %>
+    <%= f.input :pidate,label:"Passport Issue Date" %>
+    <%= f.input :pedate,label:"Passport Expiry Date" %>
+    <%= f.input :iqamano,label:"Iqama Number" %>
+    <%= f.input :iqidate,label:"Iqama Issue Date" %>
+    <%= f.input :iqedate,label:"Iqama Expiry Date" %>
+    <%= f.input :insuranceno,label:"Insurance Number" %>
+    <%= f.input :iidate,label:"Insurance Issue Date" %>
+    <%= f.input :iedate,label:"Insurance Expiry Date" %>
+    <%= f.input :visano,label:"Visa Number" %>
+    <%= f.input :vidate,label:"Visa Issue Date" %>
+    <%= f.input :vedate,label:"Visa Expiry Date" %>
   </div>
   <div class="control-group">
-    <%= f.label :middle_name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :middle_name, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :last_name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :last_name, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :gender, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :gender, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :dob, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :dob, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :passportno, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :passportno, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :pidate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :pidate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :pedate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :pedate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :iqamano, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :iqamano, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :iqidate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :iqidate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :iqedate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :iqedate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :insuranceno, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :insuranceno, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :iidate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :iidate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :iedate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :iedate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :visano, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :visano, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :vidate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :vidate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :vedate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.date_select :vedate, :class => 'date_select' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :Marstatus, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :Marstatus, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :religion, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :religion, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :nationality, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :nationality, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :civstatus, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :civstatus, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :designation, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :designation, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :department, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :department, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :speciali, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :speciali, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :exp, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :exp, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :email, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :email, :class => 'text_field' %>
-    </div>
-  </div>
+    <%= f.input :Marstatus,label:"Marital Status", collection:["single","married"],as: :radio_buttons %>
+    <%= f.input :religion,label:"Religion",collection:[["Muslim","muslim"],["Non-Muslim","non_muslim"]] %>
+    <%= f.input :nationality,label:"Nationality", as: :country %>
+    <%= f.input :civstatus,label:"Civil Status" %>
+    <%= f.input :designation,label:"Designation" %>
+    <%= f.input :department,label:"Department" %>
+    <%= f.input :speciali,label:"Specialisation" %>
+    <%= f.input :exp,label:"Experience" %>
+    <%= f.input :email,label:"Email" ,placeholder:'user@domain.com'%>
+    
+ </div>
+    
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                employees_path, :class => 'btn' %>
+    <%= f.button :submit ,:class => 'btn btn-primary'%>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),employees_path, :class => 'btn' %>
   </div>
 <% end %>
