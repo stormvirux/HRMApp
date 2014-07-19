@@ -1,49 +1,62 @@
-<%= form_for(@contract) do |f| %>
-  <% if @contract.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
-
-      <ul>
-      <% @contract.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @contract, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :empno, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :empno, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :htype, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :htype, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :status, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cstart, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :cstart, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cend, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :cend, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pstart, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :pstart, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pend, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :pend, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nameiqama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nameiqama, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :proiqama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :proiqama, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :htype %><br />
-    <%= f.text_field :htype %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :cstart %><br />
-    <%= f.date_select :cstart %>
-  </div>
-  <div class="field">
-    <%= f.label :cend %><br />
-    <%= f.date_select :cend %>
-  </div>
-  <div class="field">
-    <%= f.label :pstart %><br />
-    <%= f.date_select :pstart %>
-  </div>
-  <div class="field">
-    <%= f.label :pend %><br />
-    <%= f.date_select :pend %>
-  </div>
-  <div class="field">
-    <%= f.label :nameiqama %><br />
-    <%= f.text_field :nameiqama %>
-  </div>
-  <div class="field">
-    <%= f.label :proiqama %><br />
-    <%= f.text_field :proiqama %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                contracts_path, :class => 'btn' %>
   </div>
 <% end %>

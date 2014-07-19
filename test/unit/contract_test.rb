@@ -3,6 +3,7 @@
 # Table name: contracts
 #
 #  id         :integer         not null, primary key
+#  empno      :string(255)
 #  htype      :string(255)
 #  status     :string(255)
 #  cstart     :date

@@ -11,9 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140719083945) do
+ActiveRecord::Schema.define(:version => 20140719084915) do
 
   create_table "contracts", :force => true do |t|
+    t.string   "empno"
     t.string   "htype"
     t.string   "status"
     t.date     "cstart"
