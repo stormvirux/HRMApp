@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: contracts
+#
+#  id         :integer         not null, primary key
+#  htype      :string(255)
+#  status     :string(255)
+#  cstart     :date
+#  cend       :date
+#  pstart     :date
+#  pend       :date
+#  nameiqama  :string(255)
+#  proiqama   :string(255)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  htype: MyString
+  status: MyString
+  cstart: 2014-07-19
+  cend: 2014-07-19
+  pstart: 2014-07-19
+  pend: 2014-07-19
+  nameiqama: MyString
+  proiqama: MyString
+
+two:
+  htype: MyString
+  status: MyString
+  cstart: 2014-07-19
+  cend: 2014-07-19
+  pstart: 2014-07-19
+  pend: 2014-07-19
+  nameiqama: MyString
+  proiqama: MyString

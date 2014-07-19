@@ -1,0 +1,48 @@
+<%- model_class = Education -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:empno) %></th>
+      <th><%= model_class.human_attribute_name(:edtype) %></th>
+      <th><%= model_class.human_attribute_name(:degyear) %></th>
+      <th><%= model_class.human_attribute_name(:deg) %></th>
+      <th><%= model_class.human_attribute_name(:special) %></th>
+      <th><%= model_class.human_attribute_name(:verified) %></th>
+      <th><%= model_class.human_attribute_name(:verby) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @educations.each do |education| %>
+      <tr>
+        <td><%= link_to education.id, education_path(education) %></td>
+        <td><%= education.empno %></td>
+        <td><%= education.edtype %></td>
+        <td><%= education.degyear %></td>
+        <td><%= education.deg %></td>
+        <td><%= education.special %></td>
+        <td><%= education.verified %></td>
+        <td><%= education.verby %></td>
+        <td><%=l education.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_education_path(education), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      education_path(education),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_education_path,
+            :class => 'btn btn-primary' %>

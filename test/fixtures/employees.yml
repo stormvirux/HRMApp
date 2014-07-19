@@ -1,0 +1,95 @@
+# == Schema Information
+#
+# Table name: employees
+#
+#  id          :integer         not null, primary key
+#  empno       :string(255)
+#  first_name  :string(255)
+#  middle_name :string(255)
+#  last_name   :string(255)
+#  gender      :string(255)
+#  dob         :date
+#  passportno  :string(255)
+#  pidate      :date
+#  pedate      :date
+#  iqamano     :string(255)
+#  iqidate     :date
+#  iqedate     :date
+#  insuranceno :string(255)
+#  iidate      :date
+#  iedate      :date
+#  visano      :string(255)
+#  vidate      :date
+#  vedate      :date
+#  Marstatus   :string(255)
+#  religion    :string(255)
+#  nationality :string(255)
+#  civstatus   :string(255)
+#  designation :string(255)
+#  department  :string(255)
+#  speciali    :string(255)
+#  exp         :string(255)
+#  email       :string(255)
+#  created_at  :datetime        not null
+#  updated_at  :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empno: MyString
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  gender: MyString
+  dob: 2014-07-19
+  passportno: MyString
+  pidate: 2014-07-19
+  pedate: 2014-07-19
+  iqamano: MyString
+  iqidate: 2014-07-19
+  iqedate: 2014-07-19
+  insuranceno: MyString
+  iidate: 2014-07-19
+  iedate: 2014-07-19
+  visano: MyString
+  vidate: 2014-07-19
+  vedate: 2014-07-19
+  Marstatus: MyString
+  religion: MyString
+  nationality: MyString
+  civstatus: MyString
+  designation: MyString
+  department: MyString
+  speciali: MyString
+  exp: MyString
+  email: MyString
+
+two:
+  empno: MyString
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  gender: MyString
+  dob: 2014-07-19
+  passportno: MyString
+  pidate: 2014-07-19
+  pedate: 2014-07-19
+  iqamano: MyString
+  iqidate: 2014-07-19
+  iqedate: 2014-07-19
+  insuranceno: MyString
+  iidate: 2014-07-19
+  iedate: 2014-07-19
+  visano: MyString
+  vidate: 2014-07-19
+  vedate: 2014-07-19
+  Marstatus: MyString
+  religion: MyString
+  nationality: MyString
+  civstatus: MyString
+  designation: MyString
+  department: MyString
+  speciali: MyString
+  exp: MyString
+  email: MyString

@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: educations
+#
+#  id         :integer         not null, primary key
+#  empno      :string(255)
+#  edtype     :string(255)
+#  degyear    :string(255)
+#  deg        :string(255)
+#  special    :string(255)
+#  verified   :boolean
+#  verby      :string(255)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empno: MyString
+  edtype: MyString
+  degyear: MyString
+  deg: MyString
+  special: MyString
+  verified: false
+  verby: MyString
+
+two:
+  empno: MyString
+  edtype: MyString
+  degyear: MyString
+  deg: MyString
+  special: MyString
+  verified: false
+  verby: MyString

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Htype:</b>
+  <%= @contract.htype %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @contract.status %>
+</p>
+
+<p>
+  <b>Cstart:</b>
+  <%= @contract.cstart %>
+</p>
+
+<p>
+  <b>Cend:</b>
+  <%= @contract.cend %>
+</p>
+
+<p>
+  <b>Pstart:</b>
+  <%= @contract.pstart %>
+</p>
+
+<p>
+  <b>Pend:</b>
+  <%= @contract.pend %>
+</p>
+
+<p>
+  <b>Nameiqama:</b>
+  <%= @contract.nameiqama %>
+</p>
+
+<p>
+  <b>Proiqama:</b>
+  <%= @contract.proiqama %>
+</p>
+
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>

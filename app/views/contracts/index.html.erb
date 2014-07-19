@@ -1,0 +1,37 @@
+<h1>Listing contracts</h1>
+
+<table>
+  <tr>
+    <th>Htype</th>
+    <th>Status</th>
+    <th>Cstart</th>
+    <th>Cend</th>
+    <th>Pstart</th>
+    <th>Pend</th>
+    <th>Nameiqama</th>
+    <th>Proiqama</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contracts.each do |contract| %>
+  <tr>
+    <td><%= contract.htype %></td>
+    <td><%= contract.status %></td>
+    <td><%= contract.cstart %></td>
+    <td><%= contract.cend %></td>
+    <td><%= contract.pstart %></td>
+    <td><%= contract.pend %></td>
+    <td><%= contract.nameiqama %></td>
+    <td><%= contract.proiqama %></td>
+    <td><%= link_to 'Show', contract %></td>
+    <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
+    <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contract', new_contract_path %>
