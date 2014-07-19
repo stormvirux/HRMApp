@@ -37,8 +37,8 @@
 class Employee < ActiveRecord::Base
      attr_accessible :Marstatus, :civstatus, :department, :designation, :dob, :email, :empno, :exp, :first_name, :gender, :iedate, :iidate, :insuranceno, :iqamano, :iqedate, :iqidate, :last_name, :middle_name, :nationality, :passportno, :pedate, :pidate, :religion, :speciali, :vedate, :vidate, :visano
   validates :first_name, presence: true , length: { maximum: 50 }
-  validates :empNo, presence: true, uniqueness:{ case_sensitive: false }
-  validates_length_of :empNo, :minimum => 5, :maximum => 5
+  validates :empno, presence: true, uniqueness:{ case_sensitive: false }
+  validates_length_of :empno, :minimum => 5, :maximum => 5
   validates  :iqamano, presence: true
   validates  :iqedate, presence: true
   validates  :iqidate, presence: true
