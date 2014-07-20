@@ -80,4 +80,24 @@ class EmployeesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def docshow
+  end
+  
+  def passport
+    @employees=Employee.all
+      #format.json { render json: @employee }
+  end
+  
+  def iqama
+    @employees=Employee.all
+  end
+  
+  def visa
+    @employees=Employee.all
+  end
+  
+  def insurance
+    @employees=Employee.all
+  end
 end

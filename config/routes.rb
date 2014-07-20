@@ -1,11 +1,16 @@
 HrsiteNew::Application.routes.draw do
-  get "documents/docshow"
+  #get "documents/docshow"
 
   resources :contracts
   root to: 'static_pages#home'
   resources :educations
   resources :employees
   match '/help', to: 'static_pages#help'
+  match '/docshow', to: 'employees#docshow'
+  match '/passport', to: 'employees#passport'
+  match '/iqama', to: 'employees#iqama'
+  match '/visa', to: 'employees#visa'
+  match '/insurance', to: 'employees#insurance'
   #get "static_pages/home"
 
   #get "static_pages/help"

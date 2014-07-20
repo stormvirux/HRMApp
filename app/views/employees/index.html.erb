@@ -19,11 +19,10 @@
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-  <div style="overflow-y:auto;">
   <tbody>
     <% @employees.each_with_index do |employee,i| %>
       <tr>
-        <td><%= link_to (i+1), employee_path(employee) %></td>
+        <td><%= link_to (i+1), employee_path(employee),{class: "link"} %></td>
         <td><%= employee.empno %></td>
         <td><%= employee.first_name %></td>
         <td><%= employee.middle_name %></td>
