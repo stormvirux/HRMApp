@@ -1,4 +1,6 @@
 HrsiteNew::Application.routes.draw do
+  get "documents/docshow"
+
   resources :contracts
   root to: 'static_pages#home'
   resources :educations
