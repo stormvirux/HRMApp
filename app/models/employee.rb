@@ -48,4 +48,19 @@ class Employee < ActiveRecord::Base
   validates :vedate, presence: true
   validates  :vidate, presence: true
   validates  :visano, presence: true
+  
+#  scope :date_pexp, lambda{|pedate|
+#  if pedate.present?
+#    where( :date_exp =>  ((Date.today - pedate).to_i))
+#  end
+#}
+#  ransacker :date_pexp, :formatter => proc {|v| Date.today - v} do |parent|
+#    parent.table[:pedate]
+#  end
+#   ransacker :date_pexp do |parent|
+#     Arel::Nodes::InfixOperation.new('-',Date.today,parent.table[:pedate])
+#   end
+  ransacker :date_pexp do |r|
+   Arel::Nodes::SqlLiteral.new("DATEDIFF(`employees`.`pedate`,'Date.today')")
+  end  
 end
