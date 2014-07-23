@@ -3,13 +3,11 @@ HrsiteNew::Application.routes.draw do
 
 
   match '/expshow', to: "expiry#expshow"
-
-  #get "documents/docshow"
   resources :sessions, only: [:new, :create, :destroy]
   resources :contracts
-  root to: 'static_pages#home'
   resources :educations
   resources :employees
+  root to: 'static_pages#home'
   match '/help', to: 'static_pages#help'
   match '/docshow', to: 'employees#docshow'
   match '/passport', to: 'employees#passport'
