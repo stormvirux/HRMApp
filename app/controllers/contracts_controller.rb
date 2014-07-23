@@ -1,4 +1,6 @@
 class ContractsController < ApplicationController
+before_filter :signed_in_user,
+                only: [:index, :edit, :update, :destroy,:show,:new,:create]
   # GET /contracts
   # GET /contracts.json
   def index

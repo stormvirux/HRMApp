@@ -1,4 +1,6 @@
 class EducationsController < ApplicationController
+  before_filter :signed_in_user,
+                only: [:index, :edit, :update, :destroy,:visa,:show,:new,:create]
   # GET /educations
   # GET /educations.json
   def index

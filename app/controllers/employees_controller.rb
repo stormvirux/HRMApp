@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+  before_filter :signed_in_user,
+                only: [:index, :edit, :update, :destroy,:docshow,:iqama,:passport,:insurance,:visa,:show,:new,:create]
   # GET /employees
   # GET /employees.json
   def index
