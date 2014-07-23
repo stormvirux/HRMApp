@@ -54,13 +54,13 @@ class Employee < ActiveRecord::Base
 #    where( :date_exp =>  ((Date.today - pedate).to_i))
 #  end
 #}
-#  ransacker :date_pexp, :formatter => proc {|v| Date.today - v} do |parent|
-#    parent.table[:pedate]
-#  end
+  ransacker :date_pexp, :formatter => proc {|v| v<:pedate} do |parent|
+    parent.table[:pedate]
+  end
 #   ransacker :date_pexp do |parent|
 #     Arel::Nodes::InfixOperation.new('-',Date.today,parent.table[:pedate])
 #   end
-  ransacker :date_pexp do |r|
-   Arel::Nodes::SqlLiteral.new("DATEDIFF(`employees`.`pedate`,'Date.today')")
-  end  
+# ransacker :date_pexp do |r|
+#   Arel::Nodes::SqlLiteral.new("DATEDIFF(`employees`.`pedate`,'Date.today')")
+#  end  
 end

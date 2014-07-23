@@ -1,5 +1,8 @@
 HrsiteNew::Application.routes.draw do
-  match 'expshow', to: "expiry#expshow"
+  resources :searches
+
+
+  match '/expshow', to: "expiry#expshow"
 
   #get "documents/docshow"
   resources :sessions, only: [:new, :create, :destroy]
