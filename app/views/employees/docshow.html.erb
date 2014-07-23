@@ -1,0 +1,18 @@
+<%- model_class = Employee -%>
+<div class="page-header">
+  <h1>Select <%=t '.title', :default => model_class.model_name.human.titleize %> Document</h1>
+</div>
+  <br/>
+  <br/>
+<div id="hi">
+  <div class="row">
+    <h3><div class="span6 text-center"><%= link_to "Passport", passport_path,{class: "link"}%></div></h3>
+    <h3><div class="span6 text-center"><%= link_to "Iqama", iqama_path,{class: "link"}%></div></h3>
+  </div>
+  <br/><br/><br/>
+  <br/><br/><br/>
+  <div class="row">
+    <h3><div class="span6 text-center"><%= link_to "Visa", visa_path,{class: "link"}%></div></h3>
+    <h3><div class="span6 text-center"><%= link_to "Insurance", insurance_path,{class: "link"}%></div></h3>
+  </div>  
+</div>

@@ -1,0 +1,22 @@
+<body>
+<div>
+<%= search_form_for @search, url: expshow_path ,:html => {:method => :post} do |f| %>
+  <%= f.condition_fields do |c| %>
+  <div class="field">
+    <%= c.attribute_fields do |a| %>
+      <%= a.attribute_select %>
+    <% end %>
+    <%= c.predicate_select %>
+    <%= c.value_fields do |v| %>
+      <%= v.text_field :value %>
+   <% end %>
+  </div>
+ <% end %>
+    <%= f.input :pedate_lt,label: "Passports Expiring Before"%>
+
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+<%= render 'results' %>
+</div>
+<%=params[:q].inspect%>
+<body>

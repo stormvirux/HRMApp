@@ -1,0 +1,53 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a:hover{
+    background-color: transparent;
+    color: #34DDDD;
+    text-decoration: none;
+}
+.box{
+  top:320px;
+  display: block;
+}
+
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 1px solid #eaeaea;
+color: #999;
+}
+
+footer a {
+color: #555;
+}
+
+footer a:hover {
+color: #222;
+text-decoration: none;
+  background-color: transparent;
+}
+
+footer small {
+float: left;
+}
+
+footer ul {
+float: right;
+list-style: none;
+}
+
+footer ul li {
+float: left;
+margin-left: 10px;
+}
+.link:hover{
+    background-color: transparent;
+    color: #34DDDD;
+    text-decoration: none;
+}
+a:hover{
+color: #222;
+text-decoration: none;
+  background-color: transparent;
+}

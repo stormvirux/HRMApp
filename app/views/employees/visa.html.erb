@@ -1,0 +1,38 @@
+<%- model_class = Employee -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %>Visa Details</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>S#</th>
+      <th>Employee No</th>
+      <th>Visa No</th>
+      <th>Visa Issue</th>
+      <th>Visa Expiry</th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee,i| %>
+      <tr>
+        <td><%= link_to (i+1), employee_path(employee),{class: "link"} %></td>
+        <td><%= employee.empno %></td>
+        <td><%= employee.visano %></td>
+        <td><%= employee.vidate %></td>
+        <td><%= employee.vedate %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_employee_path(employee), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      employee_path(employee),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
