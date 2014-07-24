@@ -75,13 +75,4 @@ before_filter :signed_in_user,
 
   # DELETE /contracts/1
   # DELETE /contracts/1.json
-  def destroy
-    @contract = Contract.find(params[:id])
-    @contract.destroy
-
-    respond_to do |format|
-      format.html { redirect_to contracts_url }
-      format.json { head :no_content }
-    end
-  end
 end

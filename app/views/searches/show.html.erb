@@ -1,6 +1,9 @@
-<p id="notice"><%= notice %></p>
-
- 
-<%=render @search.employees%>
+<div class="table table-striped">
+<%= content_tag :h2, display_results_header(@search.employees.size) %>
+<%= content_tag :table do %>
+<%= content_tag :thead, display_sort_column_headers(@search), nil, false %>
+<%= content_tag :tbody, display_search_results(@search.employees), nil, false %>
+<% end %>
+</div>
 
 <%= link_to 'Back', searches_path %>

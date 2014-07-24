@@ -5,24 +5,23 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:empno) %></th>
-      <th><%= model_class.human_attribute_name(:htype) %></th>
-      <th><%= model_class.human_attribute_name(:status) %></th>
-      <th><%= model_class.human_attribute_name(:cstart) %></th>
-      <th><%= model_class.human_attribute_name(:cend) %></th>
-      <th><%= model_class.human_attribute_name(:pstart) %></th>
-      <th><%= model_class.human_attribute_name(:pend) %></th>
-      <th><%= model_class.human_attribute_name(:nameiqama) %></th>
-      <th><%= model_class.human_attribute_name(:proiqama) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>S#</th>
+      <th>Employee No</th>
+      <th>Hire Type</th>
+      <th>Hire Status</th>
+      <th>Contract Start</th>
+      <th>Contract End</th>
+      <th>Probation Start</th>
+      <th>Probation End</th>
+      <th>Name Iqama</th>
+      <th>Prof Iqama</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @contracts.each do |contract| %>
+    <% @contracts.each_with_index do |contract,i| %>
       <tr>
-        <td><%= link_to contract.id, contract_path(contract) %></td>
+        <td><%= link_to (i+1), contract_path(contract),{class: "link"} %></td>
         <td><%= contract.empno %></td>
         <td><%= contract.htype %></td>
         <td><%= contract.status %></td>
@@ -32,15 +31,9 @@
         <td><%= contract.pend %></td>
         <td><%= contract.nameiqama %></td>
         <td><%= contract.proiqama %></td>
-        <td><%=l contract.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_contract_path(contract), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      contract_path(contract),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
     <% end %>

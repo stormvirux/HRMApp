@@ -5,22 +5,21 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:empno) %></th>
-      <th><%= model_class.human_attribute_name(:edtype) %></th>
-      <th><%= model_class.human_attribute_name(:degyear) %></th>
-      <th><%= model_class.human_attribute_name(:deg) %></th>
-      <th><%= model_class.human_attribute_name(:special) %></th>
-      <th><%= model_class.human_attribute_name(:verified) %></th>
-      <th><%= model_class.human_attribute_name(:verby) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>S#</th>
+      <th>Employee No</th>
+      <th>Education Type</th>
+      <th>Deg Year</th>
+      <th>Degree</th>
+      <th>Special</th>
+      <th>Verified</th>
+      <th>Verified By</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @educations.each do |education| %>
+    <% @educations.each_with_index do |education,i| %>
       <tr>
-        <td><%= link_to education.id, education_path(education) %></td>
+        <td><%= link_to (i+1), education_path(education) %></td>
         <td><%= education.empno %></td>
         <td><%= education.edtype %></td>
         <td><%= education.degyear %></td>
@@ -28,15 +27,9 @@
         <td><%= education.special %></td>
         <td><%= education.verified %></td>
         <td><%= education.verby %></td>
-        <td><%=l education.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_education_path(education), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      education_path(education),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
     <% end %>
