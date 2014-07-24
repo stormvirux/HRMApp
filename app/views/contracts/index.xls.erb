@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Employee No</Data></Cell>
+        <Cell><Data ss:Type="String">Hire Type</Data></Cell>
+        <Cell><Data ss:Type="String">Status</Data></Cell>
+        <Cell><Data ss:Type="String">Contract Start</Data></Cell>
+        <Cell><Data ss:Type="String">Contract End</Data></Cell>
+        <Cell><Data ss:Type="String">Prob Start</Data></Cell>
+        <Cell><Data ss:Type="String">Prob End</Data></Cell>
+        <Cell><Data ss:Type="String">Iqama Name</Data></Cell>
+        <Cell><Data ss:Type="String">Profession Iqama</Data></Cell>
+      </Row>
+
+
+    <% @contracts.each do |contract| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= contract.empno %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.htype %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.status %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.cstart%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.cend%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.pstart%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.pend%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.nameiqama%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= contract.proiqama%></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

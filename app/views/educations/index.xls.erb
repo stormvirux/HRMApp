@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Employee No</Data></Cell>
+        <Cell><Data ss:Type="String">Education Type</Data></Cell>
+        <Cell><Data ss:Type="String">Degree Year</Data></Cell>
+        <Cell><Data ss:Type="String">Degree</Data></Cell>
+        <Cell><Data ss:Type="String">Specialisation</Data></Cell>
+        <Cell><Data ss:Type="String">Verified</Data></Cell>
+        <Cell><Data ss:Type="String">Verified By</Data></Cell>
+      </Row>
+
+
+
+
+    <% @educations.each do |education| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= education.empno %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= education.edtype %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= education.degyear %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= education.deg%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= education.special%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= education.verified%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= education.verby%></Data></Cell>
+        
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

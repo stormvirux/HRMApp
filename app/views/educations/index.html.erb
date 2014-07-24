@@ -42,7 +42,9 @@
     <% end %>
   </tbody>
 </table>
-
+<div class="form-actions">
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_education_path,
             :class => 'btn btn-primary' %>
+<%= link_to "To Excel",educations_path(format: "xls"),:class => 'btn btn-mini' %>
+</div>

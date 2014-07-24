@@ -46,7 +46,9 @@
     <% end %>
   </tbody>
 </table>
-
+<div class="form-actions">
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_contract_path,
             :class => 'btn btn-primary' %>
+<%= link_to "To Excel",contracts_path(format: "xls"),:class => 'btn btn-mini' %>
+</div>

@@ -1,4 +1,4 @@
-<%= simple_form_for @employee, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @employee, :html => {:multipart => true ,:class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.input :empno,label:"Employee No" %>
     <%= f.input :first_name,label:"First Name" %>
@@ -31,9 +31,14 @@
     <%= f.input :speciali,label:"Specialisation" %>
     <%= f.input :exp,label:"Experience" %>
     <%= f.input :email,label:"Email" ,placeholder:'user@domain.com'%>
-    
- </div>
-    
+  </div>
+  <div class="control-group">
+
+    <div class="attach-set">
+      <%= f.label "Select Image" %> &nbsp
+      <%= f.file_field :image, label: "Select image" %>
+    </div>
+  </div>  
 
   <div class="form-actions">
     <%= f.button :submit ,:class => 'btn btn-primary'%>

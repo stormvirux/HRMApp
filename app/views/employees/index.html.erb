@@ -50,4 +50,5 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_employee_path,
             :class => 'btn btn-primary' %>
+<%= link_to "To Excel",employees_path(format: "xls"),:class => 'btn btn-mini' %>
 </div>

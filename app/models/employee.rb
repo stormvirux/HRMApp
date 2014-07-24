@@ -35,7 +35,7 @@
 #
 
 class Employee < ActiveRecord::Base
-     attr_accessible :Marstatus, :civstatus, :department, :designation, :dob, :email, :empno, :exp, :first_name, :gender, :iedate, :iidate, :insuranceno, :iqamano, :iqedate, :iqidate, :last_name, :middle_name, :nationality, :passportno, :pedate, :pidate, :religion, :speciali, :vedate, :vidate, :visano
+  attr_accessible :Marstatus, :civstatus, :department, :designation, :dob, :email, :empno, :exp, :first_name, :gender, :iedate, :iidate, :insuranceno, :iqamano, :iqedate, :iqidate, :last_name, :middle_name, :nationality, :passportno, :pedate, :pidate, :religion, :speciali, :vedate, :vidate, :visano,:image
   validates :first_name, presence: true , length: { maximum: 50 }
   validates :empno, presence: true, uniqueness:{ case_sensitive: false }
   validates_length_of :empno, :minimum => 5, :maximum => 5
@@ -48,19 +48,13 @@ class Employee < ActiveRecord::Base
   validates :vedate, presence: true
   validates  :vidate, presence: true
   validates  :visano, presence: true
-  
-#  scope :date_pexp, lambda{|pedate|
-#  if pedate.present?
-#    where( :date_exp =>  ((Date.today - pedate).to_i))
-#  end
-#}
-  ransacker :date_pexp, :formatter => proc {|v| v<:pedate} do |parent|
-    parent.table[:pedate]
-  end
-#   ransacker :date_pexp do |parent|
-#     Arel::Nodes::InfixOperation.new('-',Date.today,parent.table[:pedate])
-#   end
-# ransacker :date_pexp do |r|
-#   Arel::Nodes::SqlLiteral.new("DATEDIFF(`employees`.`pedate`,'Date.today')")
-#  end  
+  mount_uploader :image, ImageUploader
+  def self.to_csv()
+    CSV.generate() do |csv|
+      csv << column_names
+      all.each do |employee|
+        csv << employee.attributes.values_at(*column_names)
+      end
+    end
+  end 
 end

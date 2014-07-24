@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140723055607) do
+ActiveRecord::Schema.define(:version => 20140724043008) do
 
   create_table "contracts", :force => true do |t|
     t.string   "empno"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20140723055607) do
     t.string   "email"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "image"
   end
 
   create_table "searches", :force => true do |t|
