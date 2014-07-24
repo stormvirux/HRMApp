@@ -1,5 +1,5 @@
 HrsiteNew::Application.routes.draw do
-  resources :searches
+  resources :searches,only: [:new,:create,:show]
 
 
   match '/expshow', to: "expiry#expshow"

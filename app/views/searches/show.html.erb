@@ -5,5 +5,7 @@
 <%= content_tag :tbody, display_search_results(@search.employees), nil, false %>
 <% end %>
 </div>
-
-<%= link_to 'Back', searches_path %>
+<div class="form-actions">
+<%= link_to 'Back',new_search_path,:class => 'btn btn-mini' %>
+<%= link_to "To Excel",search_path(params.merge(format: 'xls')),:class => 'btn btn-mini' %>
+</div>
