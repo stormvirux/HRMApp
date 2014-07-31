@@ -1,6 +1,5 @@
 HrsiteNew::Application.routes.draw do
   scope ":locale" ,locale: /#{I18n.available_locales.join("|")}/ do
-    resources :searches,only: [:new,:create,:show]
     resources :sessions, only: [:new, :create, :destroy]
     resources :contracts
     resources :educations
@@ -16,6 +15,7 @@ HrsiteNew::Application.routes.draw do
     match '/signin', to: 'sessions#new'
     match '/signout', to: 'sessions#destroy', via: :delete
   end
+  resources :searches,only: [:new,:create,:show]
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   match '', to: redirect("/#{I18n.default_locale}")
 
