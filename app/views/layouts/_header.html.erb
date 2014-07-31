@@ -38,6 +38,8 @@
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
           <% end %>
+          <li>  <%= link_to_unless_current "English", locale: "en" %></li>
+          <li>  <%= link_to_unless_current "Arabic", locale: "ar" %></li>
           </ul>
         </nav>
       </div>

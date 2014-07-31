@@ -1,21 +1,23 @@
 HrsiteNew::Application.routes.draw do
-  resources :searches,only: [:new,:create,:show]
-
-
-  match '/expshow', to: "expiry#expshow"
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :contracts
-  resources :educations
-  resources :employees
-  root to: 'static_pages#home'
-  match '/help', to: 'static_pages#help'
-  match '/docshow', to: 'employees#docshow'
-  match '/passport', to: 'employees#passport'
-  match '/iqama', to: 'employees#iqama'
-  match '/visa', to: 'employees#visa'
-  match '/insurance', to: 'employees#insurance'
-  match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  scope ":locale" ,locale: /#{I18n.available_locales.join("|")}/ do
+    resources :searches,only: [:new,:create,:show]
+    resources :sessions, only: [:new, :create, :destroy]
+    resources :contracts
+    resources :educations
+    resources :employees
+    root to: 'static_pages#home'
+    match '/expshow', to: "expiry#expshow"
+    match '/help', to: 'static_pages#help'
+    match '/docshow', to: 'employees#docshow'
+    match '/passport', to: 'employees#passport'
+    match '/iqama', to: 'employees#iqama'
+    match '/visa', to: 'employees#visa'
+    match '/insurance', to: 'employees#insurance'
+    match '/signin', to: 'sessions#new'
+    match '/signout', to: 'sessions#destroy', via: :delete
+  end
+  match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
+  match '', to: redirect("/#{I18n.default_locale}")
 
   #get "static_pages/home"
 
