@@ -9,7 +9,7 @@ gem 'twitter-bootstrap-rails'
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'simple_form'
 gem 'country_select'
@@ -45,4 +45,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'debugger'
 group :production do
   gem 'pg', '0.12.2'
+  gem 'rails_12factor', '0.0.2'
 end
