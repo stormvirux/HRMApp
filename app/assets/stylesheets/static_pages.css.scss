@@ -6,8 +6,39 @@
 
 /* universal */
 
+html,body{
+    height: 93%
+}
+#wrap
+{
+min-height: 100%;
+}
+
+#main
+{
+overflow:auto;
+padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer
+{
+position: relative;
+margin-top: -35px; /* negative value of footer height */
+height: 35px;
+clear:both;
+padding-top:20px;
+color:#fff;
+}
 html {
 overflow-y: scroll;
+}
+html .bg{
+    background: url('the_hr_room_logo_pms7489.jpg') no-repeat center center fixed;
+    background-color: #fff;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size:contain;
+    -o-background-size: contain;
 }
 
 body {
@@ -76,13 +107,13 @@ text-decoration: none;
 }
 
 /* footer */
-footer {
+/*footer {
 margin-top: 45px;
 padding-top: 5px;
 border-top: 1px solid #eaeaea;
 color: #999;
 }
-
+*/
 footer a {
 color: #555;
 }
