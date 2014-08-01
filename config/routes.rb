@@ -1,9 +1,12 @@
 HrsiteNew::Application.routes.draw do
+
   scope ":locale" ,locale: /#{I18n.available_locales.join("|")}/ do
     resources :sessions, only: [:new, :create, :destroy]
     resources :contracts
     resources :educations
     resources :employees
+    resources :vehicles
+    resources :documents
     root to: 'static_pages#home'
     match '/expshow', to: "expiry#expshow"
     match '/help', to: 'static_pages#help'

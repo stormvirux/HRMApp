@@ -1,0 +1,26 @@
+<%= simple_form_for @document, :html => {:multipart => true ,:class => 'form-horizontal' } do |f| %>
+   <div class="control-group">
+    <%= f.input :empno,collection: Employee.all,label_method: :empno,value_method: :id,label: "Employee Name" ,:include_blank => false%>
+  <div class="attach-set">
+      <%= f.label "Select Signature Image" %> &nbsp
+      <%= f.file_field :sig, label: "Select Siganture" %>
+  </div><br>
+     <div class="attach-set">
+      <%= f.label "Select Passport Image" %> &nbsp
+      <%= f.file_field :passport, label: "Select Passport" %>
+  </div><br>
+    <div class="attach-set">
+      <%= f.label "Select Iqama Image" %> &nbsp
+      <%= f.file_field :iqama, label: "Select Iqama" %>
+  </div><br>
+    <div class="attach-set">
+      <%= f.label "Select Visa Image" %> &nbsp
+      <%= f.file_field :sig, label: "Select Visa" %>
+  </div> 
+
+  <div class="form-actions">
+    <%= f.button :submit ,:class => 'btn btn-primary'%>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),documents_path, :class => 'btn' %>
+  </div>
+</div>
+<% end %>

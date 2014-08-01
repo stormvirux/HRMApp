@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reg: MyString
+  model: MyString
+  isthiedate: 2014-08-01
+  dname: MyString
+  nextsdate: 2014-08-01
+  remarks: MyText
+
+two:
+  reg: MyString
+  model: MyString
+  isthiedate: 2014-08-01
+  dname: MyString
+  nextsdate: 2014-08-01
+  remarks: MyText

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140724043008) do
+ActiveRecord::Schema.define(:version => 20140801055847) do
 
   create_table "contracts", :force => true do |t|
     t.string   "empno"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(:version => 20140724043008) do
     t.string   "proiqama"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "documents", :force => true do |t|
+    t.string   "empno"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "sig"
+    t.string   "passport"
+    t.string   "iqama"
+    t.string   "visa"
   end
 
   create_table "educations", :force => true do |t|
@@ -85,6 +95,17 @@ ActiveRecord::Schema.define(:version => 20140724043008) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "remember_token"
+  end
+
+  create_table "vehicles", :force => true do |t|
+    t.string   "reg"
+    t.string   "model"
+    t.date     "isthiedate"
+    t.string   "dname"
+    t.date     "nextsdate"
+    t.text     "remarks"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

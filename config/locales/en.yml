@@ -3,3 +3,17 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      vehicle:
+        reg: "Reg No" 
+        model: "Model"
+        isthiedate: "Isthimara Expiry"
+        dname: "Driver"
+        nextsdate: "Next Service"
+        remarks: "Remarks"
+      employee:
+      education:
+      contract:
+
+
