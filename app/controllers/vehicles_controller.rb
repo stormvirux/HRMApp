@@ -1,4 +1,6 @@
 class VehiclesController < ApplicationController
+  before_filter :signed_in_user,
+                only: [:index, :edit, :update, :destroy,:show,:new,:create]
   # GET /vehicles
   # GET /vehicles.json
   def index
