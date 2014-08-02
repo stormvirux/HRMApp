@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+#logo{
+max-height: 40px;
+overflow: visible;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 0;
+}
