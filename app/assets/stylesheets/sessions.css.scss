@@ -1,6 +1,48 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face{
+  font-family:'Lato';
+  font-style:normal;
+  font-weight:100;
+  src:local('Lato Hairline'),local('Lato-Hairline'),url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff')
+}
+
+@font-face{
+  font-family:'Lato';
+  font-style:normal;
+  font-weight:300;
+  src:local('Lato Light'),local('Lato-Light'),url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff')
+}
+
+@font-face{
+  font-family:'Lato';
+  font-style:normal;
+  font-weight:400;
+  src:local('Lato Regular'),local('Lato-Regular'),url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff')
+}
+
+@font-face{
+  font-family:'Open Sans';
+  font-style:normal;
+  font-weight:400;
+  src:local('Open Sans'),local('OpenSans'),url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff')
+}
+/*
+@font-face{
+  font-family:'icomoon';
+  src:url('fonts/icomoon.eot');
+  src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),url('fonts/icomoon.woff') format('woff'),url('fonts/icomoon.ttf') format('truetype'),url('fonts/icomoon.svg#icomoon') format('svg');
+  font-weight:normal;
+  font-style:normal
+}
+*/
+
+
+
+
+
 a:hover{
     background-color: transparent;
     color: #34DDDD;
@@ -51,3 +93,103 @@ color: #222;
 text-decoration: none;
   background-color: transparent;
 }
+
+#login-box{
+    width:561px;
+    height:400px;
+    padding:65px 76px 0 106px;
+    color:#999;
+    font-size:14px;
+    margin-top:100px;
+    background:#25B1F7;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+}
+
+#title{
+    font-size:50px;
+    color:#fff;
+    font-weight:100;
+    text-align:left;
+    margin:0 0 20px -6px;
+    padding:0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: "Lato",sans-serif;
+}
+.login-box-field{
+    float:left;
+    display:inline;
+    width:350px;
+    margin:0;
+    margin:0 0 7px 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+  }
+
+.form-login{
+    /*width:205px;
+    padding:10px 4px 6px 3px;
+    border:1px solid #0d2c52;*/
+    font-size:16px;
+    color:#999;
+    border: medium none;
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    margin: 0px;
+    height: 33.3px !important;
+    float: left;
+    display: block;
+    line-height: 40px;
+    width: 300px;
+    font-size: 20px;
+    padding: 0px 5px;
+    padding-top: 3px !important;
+    border-radius: 0 !important;
+  }
+
+.my-icon{
+   font-size:22px;
+   margin-top:-0.52px;
+    margin-left:0.2px;
+    background:#dfdfdf;
+    height:32.3px;
+    width:40px;
+    padding-left:8px;
+    color:#999;
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizelegibility;
+    box-sizing: border-box;
+    margin-right-value: 0px;
+    margin-bottom: 0px;
+    margin-right-ltr-source: physical;
+    margin-right-rtl-source: physical;
+    padding-top: 0px ;
+    padding-right-value: 0px;
+    padding-bottom: 0px;
+    padding-right-ltr-source: physical;
+    padding-right-rtl-source: physical;
+    border-collapse: collapse;
+    line-height: 1.5;
+    font-family: 'Glyphicons Halflings';
+    font-weight: 300;
+}
+
+        
