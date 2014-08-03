@@ -8,7 +8,7 @@ gem 'annotate', '~> 2.4.1.beta'
 gem 'twitter-bootstrap-rails'
 gem "therubyracer"
 gem "less-rails"
-
+gem 'sqlite3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'simple_form'
 gem 'country_select'
@@ -33,9 +33,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-group :developement do
-  gem 'sqlite3'
-end
+  
 # Use unicorn as the app server
 # gem 'unicorn'
 
