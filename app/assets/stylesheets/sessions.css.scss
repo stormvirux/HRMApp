@@ -202,5 +202,19 @@ text-decoration: none;
     text-decoration: none ! important;
     text-shadow: none;
 }
+  .copyright{
+    font-size:14px;
+    margin-top:10px;
+    font-family: "Lato",sans-serif;
+  }
+
+  .copyright a{
+    color:blue;
+    text-decoration:none
+  }
+
+  .copyright a:hover{
+    text-decoration:underline
+  }
 
         
