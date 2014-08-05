@@ -1,20 +1,20 @@
 <%- model_class = Contract -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>S#</th>
-      <th>Employee No</th>
-      <th>Hire Type</th>
-      <th>Hire Status</th>
-      <th>Contract Start</th>
-      <th>Contract End</th>
-      <th>Probation Start</th>
-      <th>Probation End</th>
-      <th>Name Iqama</th>
-      <th>Prof Iqama</th>
+      <th><%= model_class.human_attribute_name(:empno) %></th>
+      <th><%= model_class.human_attribute_name(:htype) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:cstart) %></th>
+      <th><%= model_class.human_attribute_name(:cend) %></th>
+      <th><%= model_class.human_attribute_name(:pstart) %></th>
+      <th><%= model_class.human_attribute_name(:pend) %></th>
+      <th><%= model_class.human_attribute_name(:nameiqama) %></th>
+      <th><%= model_class.human_attribute_name(:proiqama) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>

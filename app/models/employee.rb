@@ -32,6 +32,7 @@
 #  email       :string(255)
 #  created_at  :datetime        not null
 #  updated_at  :datetime        not null
+#  image       :string(255)
 #
 
 class Employee < ActiveRecord::Base

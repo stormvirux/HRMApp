@@ -1,18 +1,18 @@
 <%- model_class = Education -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>S#</th>
-      <th>Employee No</th>
-      <th>Education Type</th>
-      <th>Deg Year</th>
-      <th>Degree</th>
-      <th>Special</th>
-      <th>Verified</th>
-      <th>Verified By</th>
+      <th><%= model_class.human_attribute_name(:empno)%></th>
+      <th><%= model_class.human_attribute_name(:edtype)%></th>
+      <th><%= model_class.human_attribute_name(:degyear)%></th>
+      <th><%= model_class.human_attribute_name(:deg)%></th>
+      <th><%= model_class.human_attribute_name(:special)%></th>
+      <th><%= model_class.human_attribute_name(:verified)%></th>
+      <th><%= model_class.human_attribute_name(:verby)%></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>

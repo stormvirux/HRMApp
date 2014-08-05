@@ -1,41 +1,41 @@
 <%= simple_form_for @employee, :html => {:multipart => true ,:class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.input :empno,label:"Employee No" %>
-    <%= f.input :first_name,label:"First Name" %>
-    <%= f.input :middle_name,label:"Middle Name" %>
-    <%= f.input :last_name,label:"Last name" %>
-    <%= f.input :gender,collection:['male','female'],label:"Gender", as: :radio, :class=> 'checkbox inline'%>
-    <%= f.input :dob,label:"Date of Birth" %>
+    <%= f.input :empno%>
+    <%= f.input :first_name%>
+    <%= f.input :middle_name%>
+    <%= f.input :last_name%>
+    <%= f.input :gender,collection:[[t("helpers.label.employee.male").html_safe,"male"],[t("helpers.label.employee.female").html_safe,"female"]], as: :radio, :class=> 'checkbox inline'%>
+    <%= f.input :dob %>
   </div>
   <div class="control-group">
-    <%= f.input :passportno,label:"Passport Number" %>
-    <%= f.input :pidate,label:"Passport Issue Date" %>
-    <%= f.input :pedate,label:"Passport Expiry Date" %>
-    <%= f.input :iqamano,label:"Iqama Number" %>
-    <%= f.input :iqidate,label:"Iqama Issue Date" %>
-    <%= f.input :iqedate,label:"Iqama Expiry Date" %>
-    <%= f.input :insuranceno,label:"Insurance Number" %>
-    <%= f.input :iidate,label:"Insurance Issue Date" %>
-    <%= f.input :iedate,label:"Insurance Expiry Date" %>
-    <%= f.input :visano,label:"Visa Number" %>
-    <%= f.input :vidate,label:"Visa Issue Date" %>
-    <%= f.input :vedate,label:"Visa Expiry Date" %>
+    <%= f.input :passportno%>
+    <%= f.input :pidate%>
+    <%= f.input :pedate%>
+    <%= f.input :iqamano%>
+    <%= f.input :iqidate%>
+    <%= f.input :iqedate%>
+    <%= f.input :insuranceno%>
+    <%= f.input :iidate %>
+    <%= f.input :iedate %>
+    <%= f.input :visano%>
+    <%= f.input :vidate %>
+    <%= f.input :vedate %>
   </div>
   <div class="control-group">
-    <%= f.input :Marstatus,label:"Marital Status", collection:["single","married"],as: :radio_buttons %>
-    <%= f.input :religion,label:"Religion",collection:[["Muslim","muslim"],["Non-Muslim","non_muslim"]] %>
-    <%= f.input :nationality,label:"Nationality", as: :country %>
-    <%= f.input :civstatus,label:"Civil Status" %>
-    <%= f.input :designation,label:"Designation" %>
-    <%= f.input :department,label:"Department" %>
-    <%= f.input :speciali,label:"Specialisation" %>
-    <%= f.input :exp,label:"Experience" %>
-    <%= f.input :email,label:"Email" ,placeholder:'user@domain.com'%>
+    <%= f.input :Marstatus, collection:[[t("helpers.label.employee.single").html_safe ,"single"],[t("helpers.label.employee.married").html_safe ,"married"]],as: :radio_buttons %>
+    <%= f.input :religion,collection:[[t("helpers.label.employee.mus").html_safe ,"muslim"],[t("helpers.label.employee.nmus").html_safe ,"nonmuslim"]] %>
+    <%= f.input :nationality, as: :country %>
+    <%= f.input :civstatus%>
+    <%= f.input :designation%>
+    <%= f.input :department%>
+    <%= f.input :speciali%>
+    <%= f.input :exp%>
+    <%= f.input :email,placeholder:'user@domain.com'%>
   </div>
   <div class="control-group">
 
     <div class="attach-set">
-      <%= f.label "Select Image" %> &nbsp
+      <%= f.label t("helpers.label.employee.image").html_safe %> &nbsp
       <%= f.file_field :image, label: "Select image" %>
     </div>
   </div>  

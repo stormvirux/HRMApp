@@ -16,3 +16,17 @@ en:
       save: "Save %{model}"
       new: "New %{model}"
       delete: "Delete %{model}"
+    label:
+      employee:
+        image: "Select Image"
+        male: "Male"
+        female: "Female"
+        mus: "Muslim"
+        nmus: "Non Muslim"
+        single: "Single"
+        married: "Maried"
+      contract:
+        single: "Single"
+        family: "Family"
+      search:
+        search: "Search"

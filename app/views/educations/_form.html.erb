@@ -1,12 +1,12 @@
 <%= simple_form_for @education, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.input :empno,collection: Employee.all,label_method: :empno,value_method: :id,label: "Employee Name" ,:include_blank => false%>
-    <%= f.input :edtype,label: "Education Type",collection: ["#"]%>
-    <%= f.input :degyear,label: "Degree Year",collection: 1947...2020%>
-    <%= f.input :deg,label: "Degree",collection: ["#"]%>
-    <%= f.input :special,label: "Specialization"%>
-    <%= f.input :verified,label: "Verified"%>
-    <%= f.input :verby,label: "Verified By",collection: ["#"]%>
+    <%= f.input :edtype,collection: ["#"]%>
+    <%= f.input :degyear,collection: 1947...2020%>
+    <%= f.input :deg,collection: ["#"]%>
+    <%= f.input :special%>
+    <%= f.input :verified%>
+    <%= f.input :verby,collection: ["#"]%>
   </div>
 
   <div class="form-actions">

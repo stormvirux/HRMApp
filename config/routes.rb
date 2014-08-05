@@ -7,6 +7,7 @@ HrsiteNew::Application.routes.draw do
     resources :employees
     resources :vehicles
     resources :documents
+    resources :searches,only: [:new,:create,:show]
     root to: 'static_pages#home'
     match '/expshow', to: "expiry#expshow"
     match '/help', to: 'static_pages#help'

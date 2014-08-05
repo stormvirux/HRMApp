@@ -2,6 +2,422 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 ar:
-  tds:
-    index:
-      title: "مرحبا العالم"
+  n1: "١"
+  n2: "٢"
+  n3: "٣"
+  n4: "٤"
+  n5: "٥"
+  n6: "٦"
+  n7: "٧"
+  n8: "٨"
+  n9: "٩"
+  n0: "٠"
+  date:
+    abbr_day_names:
+    - الأحد
+    - الإثنين
+    - الثلاثاء
+    - الأربعاء
+    - الخميس
+    - الجمعة
+    - السبت
+    abbr_month_names:
+    -
+    - يناير
+    - فبراير
+    - مارس
+    - ابريل
+    - مايو
+    - يونيو
+    - يوليو
+    - اغسطس
+    - سبتمبر
+    - اكتوبر
+    - نوفمبر
+    - ديسمبر
+    day_names:
+    - الأحد
+    - الإثنين
+    - الثلاثاء
+    - الأربعاء
+    - الخميس
+    - الجمعة
+    - السبت
+    formats:
+      default: ! '%Y-%m-%d'
+      long: ! '%B %e, %Y'
+      short: ! '%e %b'
+    month_names:
+    -
+    - يناير
+    - فبراير
+    - مارس
+    - ابريل
+    - مايو
+    - يونيو
+    - يوليو
+    - اغسطس
+    - سبتمبر
+    - اكتوبر
+    - نوفمبر
+    - ديسمبر
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        zero: ! 'حوالي صفر ساعات'
+        one: حوالي ساعة واحدة
+        two: ! 'حوالي ساعتان'
+        few: ! 'حوالي %{count} ساعات'
+        many: ! 'حوالي %{count} ساعة'
+        other: ! 'حوالي %{count} ساعة'
+      about_x_months:
+        zero: ! 'حوالي صفر أشهر'
+        one: حوالي شهر واحد
+        two: ! 'حوالي شهران'
+        few: ! 'حوالي %{count} أشهر'
+        many: ! 'حوالي %{count} شهر'
+        other: ! 'حوالي %{count} شهر'
+      about_x_years:
+        zero: ! 'حوالي صفر سنوات'
+        one: حوالي سنة
+        two: ! 'حوالي سنتان'
+        few: ! 'حوالي %{count} سنوات'
+        many: ! 'حوالي %{count} سنة'
+        other: ! 'حوالي %{count} سنة'
+      almost_x_years:
+        zero: ! 'ما يقرب من صفر سنوات'
+        one: تقريبا سنة واحدة
+        two: ما يقرب من سنتين
+        few: ما يقرب من %{count} سنوات
+        many: ما يقرب من %{count} سنة
+        other: ما يقرب من %{count} سنة
+      half_a_minute: نصف دقيقة
+      less_than_x_minutes:
+        zero: ! 'أقل من صفر دقائق'
+        one: أقل من دقيقة
+        two: ! 'أقل من دقيقتان'
+        few: ! 'أقل من %{count} دقائق'
+        many: ! 'أقل من %{count} دقيقة'
+        other: ! 'أقل من %{count} دقيقة'
+      less_than_x_seconds:
+        zero: ! 'أقل من صفر ثواني'
+        one: أقل من ثانية
+        two: ! 'أقل من ثانيتان'
+        few: ! 'أقل من %{count} ثوان'
+        many: ! 'أقل من %{count} ثانية'
+        other: ! 'أقل من %{count} ثانية'
+      over_x_years:
+        zero: ! 'أكثر من صفر سنوات'
+        one: أكثر من سنة
+        two: ! 'أكثر من سنتين'
+        few: ! 'أكثر من %{count} سنوات'
+        many: ! 'أكثر من %{count} سنة'
+        other: ! 'أكثر من %{count} سنة'
+      x_days:
+        zero: ! 'صفر أيام'
+        one: يوم واحد
+        two: ! 'يومان'
+        few: ! '%{count} أيام'
+        many: ! '%{count} يوم'
+        other: ! '%{count} يوم'
+      x_minutes:
+        zero: ! 'صفر دقائق'
+        one: دقيقة واحدة
+        two: ! 'دقيقتان'
+        few: ! '%{count} دقائق'
+        many: ! '%{count} دقيقة'
+        other: ! '%{count} دقيقة'
+      x_months:
+        zero: ! 'صفر أشهر'
+        one: شهر واحد
+        two: ! 'شهران'
+        few: ! '%{count} أشهر'
+        many: ! '%{count} شهر'
+        other: ! '%{count} شهر'
+      x_seconds:
+        zero: ! 'صفر ثواني'
+        one: ثانية واحدة
+        two: ! 'ثانيتان'
+        few: ! '%{count} ثوان'
+        many: ! '%{count} ثانية'
+        other: ! '%{count} ثانية'
+    prompts:
+      day: اليوم
+      hour: ساعة
+      minute: دقيقة
+      month: الشهر
+      second: ثانية
+      year: السنة
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: يجب أن تقبل
+      blank: فارغ، يرجى ملء الحقل
+      present: يجب ترك الحقل فارغاً
+      confirmation: ! "لا يتوافق مع %{attribute}"
+      empty: فارغ، يرجى ملء الحقل
+      equal_to: يجب أن يساوي %{count}
+      even: يجب أن يكون زوجي
+      exclusion: محجوز
+      greater_than: يجب أن يكون أكبر من %{count}
+      greater_than_or_equal_to: يجب أن يكون أكبر من أو يساوي %{count}
+      inclusion: غير مدرج في القائمة
+      invalid: غير مقبول
+      less_than: يجب أن يكون أصغر من %{count}
+      less_than_or_equal_to: يجب أن يكون أصغر من أو يساوي %{count}
+      not_a_number: ليس رقما
+      not_an_integer: يجب أن يكون عدداً صحيحاً
+      odd: يجب أن يكون فردي
+      record_invalid: ! 'فشل التحقق من: %{errors}'
+      restrict_dependent_destroy:
+        one: "لا يمكن حذف السجل لوجود سجل يعتمد عليه %{record}"
+        many: "لا يمكن حذف السجل لوجود سجلات تعتمد عليه %{record}"
+      taken: محجوز مسبقاً
+      too_long:
+        zero: أطول من اللازم (الحد الأقصى هو ولا حرف)
+        one: أطول من اللازم (الحد الأقصى هو حرف واحد)
+        two: أطول من اللازم (الحد الأقصى هو حرفان)
+        few: أطول من اللازم (الحد الأقصى هو %{count} حروف)
+        many: أطول من اللازم (الحد الأقصى هو %{count} حرف)
+        other: أطول من اللازم (الحد الأقصى هو %{count} حرف)
+      too_short:
+        zero: أقصر من اللازم (الحد الأدنى هو ولا حرف)
+        one: أقصر من اللازم (الحد الأدنى هو حرف واحد)
+        two: أقصر من اللازم (الحد الأدنى هو حرفان)
+        few: أقصر من اللازم (الحد الأدنى هو %{count} حروف)
+        many: أقصر من اللازم (الحد الأدنى هو %{count} حرف)
+        other: أقصر من اللازم (الحد الأدنى هو %{count} حرف)
+      wrong_length:
+        zero: الطول غير مطابق للحد المطلوب (يجب أن يكون ولا حرف)
+        one: الطول غير مطابق للحد المطلوب (يجب أن يكون حرف واحد)
+        two: الطول غير مطابق للحد المطلوب (يجب أن يكون حرفان)
+        few: الطول غير مطابق للحد المطلوب (يجب أن يكون %{count} أحرف)
+        many: الطول غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
+        other: الطول غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
+      other_than:
+        zero: "الطول يجب ألاّ يكون صفر أحرف"
+        one: "الطول يجب ألاّ يكون حرفاً وحداً"
+        two: "الطول يجب ألاّ يكون حرفان"
+        few: "الطول يجب ألاّ يكون %{count} أحرف"
+        many: "الطول يجب ألاّ يكون %{count} حرفاً"
+        other: "الطول يجب ألاّ يكون %{count} حرفاً"
+    template:
+      body: ! 'يرجى التحقق من الحقول التالية:'
+      header:
+        zero: ! 'ليس بالامكان حفظ %{model}: لايوجد أخطاء.'
+        one: ! 'ليس بالامكان حفظ %{model}: خطأ واحد.'
+        two: ! 'ليس بالامكان حفظ %{model}: خطئان.'
+        few: ! 'ليس بالامكان حفظ %{model}: %{count} أخطاء.'
+        many: ! 'ليس بالامكان حفظ %{model}: %{count} أخطاء.'
+        other: ! 'ليس بالامكان حفظ %{model}: %{count} خطأ.'
+  helpers:
+    select:
+      prompt: الرجاء اختيار
+    submit:
+      create: ! '%{model} إنشاء'
+      submit: ! '%{model} حفظ'
+      update: ! '%{model} نموذج'
+  number:
+    currency:
+      format:
+        delimiter: ! ','
+        format: ! '%u%n'
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: $
+    format:
+      delimiter: ! ','
+      precision: 3
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: مليار
+          million: مليون
+          quadrillion: كدريليون
+          thousand: ألف
+          trillion: تريليون
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            zero: Bytes
+            one: Byte
+            two: Bytes
+            few: Bytes
+            many: Bytes
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' و '
+      two_words_connector: ! ' و '
+      words_connector: ! ' و '
+  time:
+    am: صباحاً
+    formats:
+      default: ! '%a %b %d %H:%M:%S %Z %Y'
+      long: ! '%B %d, %Y %H:%M'
+      short: ! '%d %b %H:%M'
+    pm: مساءً
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Please review the problems below:"
+  layouts:
+    header:
+      home: "بيت"
+      employees: "موظف"
+      educations: "التعليم"
+      contracts: "تعاقد الوظيفة"
+      search: "بحث"
+      help: "مساعده"
+      documents: "أوراق"
+      passport: "جواز"
+      iqama: "إقامة"
+      visa: "تأشيرة"
+      insurance: "تامين"
+      upload: "تنزيل"
+      vehicles: "سيارات"
+      signout: "خروج"
+      signin: "دخول"
+      accounts: "محاسبة"
+      settings: "إعدادات"
+      english: "الإنجليزية"
+      arabic: "العربية"
+  helpers:
+    actions: "الأعمال"
+    links:
+      back: "عودة"
+      cancel: "إلغاء"
+      confirm: "هل أنت متأكد؟"
+      destroy: "حذف"
+      new: "جديد"
+      edit: "تحرير"
+    titles:
+      edit: "تحرير %{model}"
+      save: "حفظ %{model}"
+      new: "جديد %{model}"
+      delete: "حذف %{model}"
+    submit:
+      create: '%{model} إنشاء'
+      submit: '%{model} حفظ'
+      update: '%{model} نموذج'
+    label:
+      employee:
+        image: "اختر صورة"
+        male: "ذكر"
+        female: "أنثى"
+        mus: "مسلم"
+        nmus: "غير مسلم"
+        single: "أعزب"
+        married: "متزوج"
+      contract:
+        single: "أعزب"
+        family: "عائلة"
+      search:
+        search: "بحث"
+  activerecord:
+    models:
+      employee: "موظف"
+      education: "التعليم"
+      contract: "تعاقد الوظيفة"
+      vehicle: "سيارات"
+      search: "بحث"
+      document: "أوراق"
+    attributes:
+      vehicle:
+        reg: "Reg No" 
+        model: "Model"
+        isthiedate: "Isthimara Expiry"
+        dname: "Driver"
+        nextsdate: "Next Service"
+        remarks: "Remarks"
+      employee:
+        empno: "dont"
+        first_name: "لإسم الأول"
+        middle_name: "اسم الأب"
+        last_name: "اسم الج"
+        gender: "اللقب"
+        dob: "تاريخ الميلاد"
+        nationality: "الجنسية"
+        designation: "الوظيفة"
+        department: "قسم"
+        exp: "الخبرة"
+        passportno: "رقم الجواز"
+        pidate: "تاريخ إصدار الجواز"
+        pedate: "تاريخ إنتهاء الجواز"
+        iqamano: "رقم الإقامة"
+        iqidate: "تاريخ إصدار الإقامة"
+        iqedate: "تاريخ إنتهاء الإقامة"
+        insuranceno: "رقم التأمين"
+        iidate: "تاريخ إصدار التأمين"
+        iedate: "تاريخ إنتهاء التأمين"
+        visano: "رقم الفيزا"
+        vedate: "تاريخ إنتهاء الفيز"
+        vidate: "تاريخ إسدار الفيزا"
+        religion: "الديانه"
+        speciali: "المهنة"
+        email: "إيميل"
+        civstatus: "موظف أو غير موظف"
+        Marstatus: "متزوج أم أعزب"
+      education:
+        empno: "donot"
+        edtype: "التخصص"
+        degyear: "في أي عام"
+        deg: "نوع الوظيفة"
+        special: "تخصص"
+        verified: "مراجعة ?"
+        verby: "مراجعة "
+      contract:
+        empno: "dont"
+        htype: "نوع التأجير"
+        status: "بداية التأجير"
+        cstart: "بداية العقد"
+        cend: "نهاية العقد"
+        pstart: "تاريخ بداية التدريب"
+        pend: "تاريخ نهاية التدريب"
+        nameiqama: "الاسم في الإقامة"
+        proiqama: " المهنة في الإقامة"
+      search:
+        doc: "أوراق"
+        edate: "تنتهي في"
+      document:
+        empno: "dont"
+        sig: "اختر صورة التوقيع"
+        passport: "اختر صورة جواز السفر"
+        iqama: "اختر صورة الإقامة"
+        visa: "اختر صورة التأشيرة"
+

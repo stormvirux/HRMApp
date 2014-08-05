@@ -2,7 +2,39 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  layouts:
+    header:
+      home: "Home"
+      employees: "Employee"
+      educations: "Education"
+      contracts: "Contract"
+      search: "Search"
+      documents: "Documents"
+      passport: "Passport"
+      iqama: "Iqama"
+      visa: "Visa"
+      insurance: "Insurance"
+      upload: "Upload"
+      vehicles: "Vehicles"
+      signin: "Sign In"
+      signout: "Sighn Out"
+      accounts: "Account"
+      settings: "Settings"
+      english: "English"
+      arabic: "Arabic"
+  employees:
+    index:
+      title: "Employees"
+  contracts:
+      title: "Contracts"
+  educations:
+      title: "Educations"
+  vehicles:
+      title: "Vehicles"
+  searches:
+      title: "Search"
+  documents:
+      title: "Documents"
   activerecord:
     attributes:
       vehicle:
@@ -13,7 +45,58 @@ en:
         nextsdate: "Next Service"
         remarks: "Remarks"
       employee:
+        empno: "EmployeeNo"
+        first_name: "First Name"
+        middle_name: "Middle Name"
+        last_name: "Last Name"
+        gender: "Gender"
+        dob: "Date of Birth"
+        nationality: "Nationality"
+        designation: "Designation"
+        department: "Department"
+        exp: "Experiance"
+        passportno: "Passport No"
+        pidate: "Passport Issue"
+        pedate: "Passport Expiry"
+        iqamano: "Iqama No"
+        iqidate: "Iqama Issue"
+        iqedate: "Iqama Expiry"
+        insuranceno: "Insurance No"
+        iidate: "Insurance Issue"
+        iedate: "Insurance Expiry"
+        visano: "Visa No"
+        vedate: "Visa Expiry"
+        vidate: "Visa Issue"
+        religion: "Religion"
+        speciali: "Specialization"
+        email: "E-mail"
+        civstatus: "Civil Status"
+        Marstatus: "Marital Status"
       education:
+        empno: "Employee No"
+        edtype: "Education Type"
+        degyear: "Degree Year"
+        deg: "Degree"
+        special: "Specializaion"
+        verified: "Verified?"
+        verby: "Verified by"
       contract:
-
+        empno: "EmployeeNo"
+        htype: "Hire Type"
+        status: "Status"
+        cstart: "Contract Start"
+        cend: "Contract End"
+        pstart: "Probation Start"
+        pend: "Probation End"
+        nameiqama: "Iqama Name"
+        proiqama: "Profession"
+      search:
+        doc: "The document"
+        edate: "Expiring within"
+      document:
+        empno: "dont"
+        sig: "Select Signature"
+        passport: "Select Passport"
+        iqama: "Select Iqama"
+        visa: "Select Visa"
 

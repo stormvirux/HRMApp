@@ -5,44 +5,43 @@
         <%= link_to image_tag("palback1.jpg",alt: "Palmate"),"http://www.palmate.in", id: "logo" %>
         <nav>
           <ul class="nav pull-right">
-            <li><%= link_to "Home",root_path %></li>
-            <li><%= link_to "Help",help_path %></li>
+            <li><%= link_to t("layouts.header.home").html_safe,root_path %></li>
+            <li><%= link_to t("layouts.header.help").html_safe,help_path %></li>
             <% if signed_in? %>
-            <li><%= link_to "Employees",employees_path %></li>
-            <li><%= link_to "Education",educations_path %></li>
-            <li><%= link_to "Contracts",contracts_path %></li>
-            <li><%= link_to "Search",'/searches/new' %></li>
+            <li><%= link_to t("layouts.header.employees").html_safe ,employees_path %></li>
+            <li><%= link_to t("layouts.header.educations").html_safe,educations_path %></li>
+            <li><%= link_to t("layouts.header.contracts").html_safe,contracts_path %></li>
+            <li><%= link_to t("layouts.header.search").html_safe,'/searches/new' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Documents <b class="caret"></b>
+                <%=t("layouts.header.documents").html_safe%> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Passport",passport_path%></li>
-                <li><%= link_to "Iqama",iqama_path%></li>
-                <li><%= link_to "Insurance",insurance_path%></li>
-                <li><%= link_to "Visa",visa_path%></li>
-                <li><%= link_to "Upload",documents_path%></li>
+                <li><%= link_to t("layouts.header.passport").html_safe,passport_path%></li>
+                <li><%= link_to t("layouts.header.iqama").html_safe,iqama_path%></li>
+                <li><%= link_to t("layouts.header.insurance").html_safe,insurance_path%></li>
+                <li><%= link_to t("layouts.header.visa").html_safe,visa_path%></li>
+                <li><%= link_to t("layouts.header.upload").html_safe,documents_path%></li>
               </ul>
             </li>
-            <li><%= link_to "Vehicles",vehicles_path %></li>
+            <li><%= link_to t("layouts.header.vehicles").html_safe ,vehicles_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
+                <%= t("layouts.header.accounts").html_safe %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Profile", "#"%></li>
-                <li><%= link_to "Settings", "#"%></li>
+                <li><%= link_to t("layouts.header.settings").html_safe, "#"%></li>
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                  <%= link_to t("layouts.header.signout").html_safe, signout_path, method: "delete" %>
                 </li>
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
+            <li><%= link_to t("layouts.header.signin").html_safe, signin_path %></li>
           <% end %>
-          <li>  <%= link_to_unless_current "English", locale: "en" %></li>
-          <li>  <%= link_to_unless_current "Arabic", locale: "ar" %></li>
+          <li>  <%= link_to_unless_current t("layouts.header.english").html_safe, locale: "en" %></li>
+          <li>  <%= link_to_unless_current t("layouts.header.arabic").html_safe, locale: "ar" %></li>
           </ul>
         </nav>
       </div>

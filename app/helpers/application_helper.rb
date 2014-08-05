@@ -7,4 +7,7 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+  def tn(num)
+    num.to_s.split(//).map{|r|t("n"+r)}.join
+  end
 end

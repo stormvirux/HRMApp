@@ -1,14 +1,14 @@
 <%= simple_form_for @contract, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.input :empno,collection: Employee.all,label_method: :empno,value_method: :id,label: "Employee Name" ,:include_blank => false%>
-    <%= f.input :htype, label: 'Hire Type',collection: ["#"]%>
-    <%= f.input :status, label: 'Status',collection: [["Single","single"],["Family","family"]], as: :radio_buttons%>
-    <%= f.input :cstart, label: 'Contract Start Date'%>
-    <%= f.input :cend, label: 'Contract End Date'%>
-    <%= f.input :pstart, label: 'Probation Start Date'%>
-    <%= f.input :pend, label: 'Probation End Date'%>
-    <%= f.input :nameiqama, label: 'Name in Iqama'%>
-    <%= f.input :proiqama, label: 'Profession in Iqama'%>
+    <%= f.input :empno,collection: Employee.all,label_method: :empno,value_method: :id,:include_blank => false%>
+    <%= f.input :htype,collection: ["#"],:include_blank => false%>
+    <%= f.input :status,collection: [[ t("helpers.label.contract.single").html_safe,"single"],[ t("helpers.label.contract.family").html_safe,"family"]], as: :radio_buttons%>
+    <%= f.input :cstart%>
+    <%= f.input :cend%>
+    <%= f.input :pstart%>
+    <%= f.input :pend%>
+    <%= f.input :nameiqama%>
+    <%= f.input :proiqama%>
   </div>
 
   <div class="form-actions">
