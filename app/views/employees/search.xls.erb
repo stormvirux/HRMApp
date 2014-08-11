@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Employee No</Data></Cell>
+        <Cell><Data ss:Type="String">First Name</Data></Cell>
+        <Cell><Data ss:Type="String">Middle Name</Data></Cell>
+        <Cell><Data ss:Type="String">Last Name</Data></Cell>
+        <Cell><Data ss:Type="String">Gender</Data></Cell>
+        <Cell><Data ss:Type="String">Date of Birth</Data></Cell>
+        <Cell><Data ss:Type="String">Passport No</Data></Cell>
+        <Cell><Data ss:Type="String">Passport Issue</Data></Cell>
+        <Cell><Data ss:Type="String">Passport Expiry</Data></Cell>
+        <Cell><Data ss:Type="String">Iqama No</Data></Cell>
+        <Cell><Data ss:Type="String">Iqama Issue</Data></Cell>
+        <Cell><Data ss:Type="String">Iqama Expiry</Data></Cell>
+        <Cell><Data ss:Type="String">Insurance No</Data></Cell>
+        <Cell><Data ss:Type="String">Insurance Issue</Data></Cell>
+        <Cell><Data ss:Type="String">Insurance Expiry</Data></Cell>
+        <Cell><Data ss:Type="String">Visa No</Data></Cell>
+        <Cell><Data ss:Type="String">Visa Issue</Data></Cell>
+        <Cell><Data ss:Type="String">Visa Expiry</Data></Cell>
+        <Cell><Data ss:Type="String">Marital Stat</Data></Cell>
+        <Cell><Data ss:Type="String">Religion</Data></Cell>
+        <Cell><Data ss:Type="String">Nationality</Data></Cell>
+        <Cell><Data ss:Type="String">Civil Status</Data></Cell>
+        <Cell><Data ss:Type="String">Designation</Data></Cell>
+        <Cell><Data ss:Type="String">Department</Data></Cell>
+        <Cell><Data ss:Type="String">Specialisation</Data></Cell>
+        <Cell><Data ss:Type="String">Experience</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+      </Row>
+
+
+
+
+    <% @employees.each do |employee| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= employee.empno %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.first_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.middle_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.last_name%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.gender%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.dob%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.passportno%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.pidate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.pedate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.iqamano%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.iqidate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.iqedate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.insuranceno%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.iidate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.iedate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.visano%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.vidate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.vedate%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.Marstatus%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.religion%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.nationality %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.civstatus%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.designation%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.department%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.speciali%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.exp%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.email%></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

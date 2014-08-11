@@ -1,0 +1,92 @@
+<%- model_class = Employee -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>S#</th>
+      <th><%= model_class.human_attribute_name(:empno) %></th>
+      <th><%= model_class.human_attribute_name(:first_name) %></th>
+      <th><%= model_class.human_attribute_name(:middle_name) %></th>
+      <th><%= model_class.human_attribute_name(:last_name) %></th>
+      <th><%= model_class.human_attribute_name(:gender) %></th>
+      <th><%= model_class.human_attribute_name(:dob) %></th>
+      <th><%= model_class.human_attribute_name(:nationality) %></th>
+      <th><%= model_class.human_attribute_name(:designation) %></th>
+      <th><%= model_class.human_attribute_name(:department) %></th>
+      <th><%= model_class.human_attribute_name(:exp) %></th>
+      <th><%= model_class.human_attribute_name(:passportno) %></th>
+      <th><%= model_class.human_attribute_name(:pidate) %></th>
+      <th><%= model_class.human_attribute_name(:pedate) %></th>
+      <th><%= model_class.human_attribute_name(:iqamano) %></th>
+      <th><%= model_class.human_attribute_name(:iqidate) %></th>
+      <th><%= model_class.human_attribute_name(:iqedate) %></th>
+      <th><%= model_class.human_attribute_name(:insuranceno) %></th>
+      <th><%= model_class.human_attribute_name(:iidate) %></th>
+      <th><%= model_class.human_attribute_name(:iedate) %></th>
+      <th><%= model_class.human_attribute_name(:visano) %></th>
+      <th><%= model_class.human_attribute_name(:vidate) %></th>
+      <th><%= model_class.human_attribute_name(:vedate) %></th>
+      <th><%= model_class.human_attribute_name(:Marstatus) %></th>
+      <th><%= model_class.human_attribute_name(:religion) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee,i| %>
+      <tr>
+        <td><%= link_to (i+1), employee_path(employee),{class: "link"} %></td>
+        <td><%= employee.empno %></td>
+        <td><%= employee.first_name %></td>
+        <td><%= employee.middle_name %></td>
+        <td><%= employee.last_name %></td>
+        <td><%= employee.gender %></td>
+        <td><%= employee.dob %></td>
+        <td><%= employee.nationality %></td>
+        <td><%= employee.designation %></td>
+        <td><%= employee.department %></td>
+        <td><%= employee.exp %></td>
+        <td><%= employee.passportno%></td>
+        <td><%= employee.pidate%></td>
+        <td><%= employee.pedate%></td>
+        <td><%= employee.iqamano%></td>
+        <td><%= employee.iqidate%></td>
+        <td><%= employee.iqedate%></td>
+        <td><%= employee.insuranceno %></td>
+        <td><%= employee.iidate%></td>
+        <td><%= employee.iedate%></td>
+        <td><%= employee.visano%></td>
+        <td><%= employee.vidate%></td>
+        <td><%= employee.vedate%></td>
+        <td><%= employee.Marstatus%></td>
+        <td><%= employee.religion %></td>
+        <td><%= employee.email %></td>
+        <td>
+
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_employee_path(employee), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      employee_path(employee),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="form-actions">
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_employee_path,
+            :class => 'btn btn-primary' %>
+<%= link_to "To Excel",find_path(params.merge(format: 'xls')),:class => 'btn btn-mini' %>
+</div>
+<% if false %>
+<ul>
+  <%= @employees.each do |employee| %>
+    <li><%= link_to employee.first_name,:action =>'show',:id =>employee.id  %></li>
+  <% end %>
+</ul>
+<% end %>
