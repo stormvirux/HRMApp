@@ -57,5 +57,11 @@ class Employee < ActiveRecord::Base
         csv << employee.attributes.values_at(*column_names)
       end
     end
+  end
+
+  def self.search(keyword)
+    search_condition="%"+ keyword +"%"
+    find(:all,:conditions =>['first_name LIKE ? OR email LIKE ?',search_condition,search_condition])
+
   end 
 end

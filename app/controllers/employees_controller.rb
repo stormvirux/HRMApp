@@ -107,4 +107,14 @@ class EmployeesController < ApplicationController
   def insurance
     @employees=Employee.all
   end
+
+  def search
+    @employees=Employee.search params[:keyword]
+    respond_to do |format|
+      format.html # index.html.erb
+      format.csv { render text: @employees.to_csv }
+      format.xls #{send_data @employees.to_csv(col_sep: "\t")}
+      format.json { render json: @employees }
+    end
+  end
 end

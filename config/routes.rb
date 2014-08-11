@@ -8,7 +8,7 @@ HrsiteNew::Application.routes.draw do
     resources :vehicles
     resources :documents
     resources :searches,only: [:new,:create,:show]
-    root to: 'static_pages#home'
+    root to: 'sessions#new'
     match '/expshow', to: "expiry#expshow"
     match '/help', to: 'static_pages#help'
     match '/docshow', to: 'employees#docshow'
@@ -18,6 +18,8 @@ HrsiteNew::Application.routes.draw do
     match '/insurance', to: 'employees#insurance'
     match '/signin', to: 'sessions#new'
     match '/signout', to: 'sessions#destroy', via: :delete
+    match '/find', to: 'employees#search'
+    match '/home', to:'static_pages#home'
   end
   resources :searches,only: [:new,:create,:show]
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
