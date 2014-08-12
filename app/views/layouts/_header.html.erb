@@ -5,13 +5,13 @@
         <%= link_to image_tag("palback1.jpg",alt: "Palmate"),"http://www.palmate.in", id: "logo" %>
         <nav>
           <ul class="nav pull-left">
-            <li><%= link_to t("layouts.header.home").html_safe,home_path %></li>
+            <li><%= link_to t("layouts.header.home").html_safe,root_path %></li>
             <li><%= link_to t("layouts.header.help").html_safe,help_path %></li>
             <% if signed_in? %>
             <li><%= link_to t("layouts.header.employees").html_safe ,employees_path %></li>
             <li><%= link_to t("layouts.header.educations").html_safe,educations_path %></li>
             <li><%= link_to t("layouts.header.contracts").html_safe,contracts_path %></li>
-            <li><%= link_to t("layouts.header.search").html_safe,'/searches/new' %></li>
+            <li><%= link_to t("layouts.header.search").html_safe,new_search_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%=t("layouts.header.documents").html_safe%> <b class="caret"></b>
@@ -37,8 +37,6 @@
                 </li>
               </ul>
             </li>
-          <% else %>
-            <li><%= link_to t("layouts.header.signin").html_safe, signin_path %></li>
           <% end %>
             <li>  <%= link_to_unless_current t("layouts.header.english").html_safe, locale: "en" %></li>
             <li>  <%= link_to_unless_current t("layouts.header.arabic").html_safe, locale: "ar" %></li>

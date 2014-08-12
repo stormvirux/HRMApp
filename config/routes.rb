@@ -1,4 +1,5 @@
 HrsiteNew::Application.routes.draw do
+  require File.expand_path("../../lib/authenticated_user",__FILE__)
 
   scope ":locale" ,locale: /#{I18n.available_locales.join("|")}/ do
     resources :sessions, only: [:new, :create, :destroy]
@@ -7,8 +8,9 @@ HrsiteNew::Application.routes.draw do
     resources :employees
     resources :vehicles
     resources :documents
-    resources :searches,only: [:new,:create,:show]
-    root to: 'sessions#new'
+    resources :searches ,only: [:new,:create,:show]
+    root to: 'static_pages#home', :constraints => AuthenticatedUser.new(true)
+    root to: 'sessions#new', :constraints => AuthenticatedUser.new(false)
     match '/expshow', to: "expiry#expshow"
     match '/help', to: 'static_pages#help'
     match '/docshow', to: 'employees#docshow'
@@ -19,9 +21,9 @@ HrsiteNew::Application.routes.draw do
     match '/signin', to: 'sessions#new'
     match '/signout', to: 'sessions#destroy', via: :delete
     match '/find', to: 'employees#search'
-    match '/home', to:'static_pages#home'
+#    match '/home', to:'static_pages#home'
   end
-  resources :searches,only: [:new,:create,:show]
+#  resources :searches,only: [:new,:create,:show]
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   match '', to: redirect("/#{I18n.default_locale}")
 
