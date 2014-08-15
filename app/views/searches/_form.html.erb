@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="control-group">
-    <%= f.input :doc,collection: [["Passport","pedate"],["Visa","vedate"],["Insurance","iedate"],["Iqama","iqedate"]],:include_blank => false%>
+    <%= f.input :doc,collection: [[t("layouts.header.passport"),"pedate"],[t("layouts.header.visa"),"vedate"],[t("layouts.header.insurance"),"iedate"],[t("layouts.header.iqama"),"iqedate"]],:include_blank => false%>
     <%= f.input :edate%>
   </div>
 
@@ -10,3 +10,5 @@
     <%= f.submit t("helpers.label.search.search").html_safe,:class => 'btn btn-primary'%>
   </div>
 <% end %>
+
+
