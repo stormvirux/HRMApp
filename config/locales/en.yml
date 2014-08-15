@@ -25,6 +25,14 @@ en:
   employees:
     index:
       title: "Employees"
+    passport: 
+      title: "Passport Details"
+    iqama:
+      title: "Iqama Details"
+    visa:
+      title: "Visa Details"
+    insurance:
+      title: "Insurance Details"
   contracts:
       title: "Contracts"
   educations:

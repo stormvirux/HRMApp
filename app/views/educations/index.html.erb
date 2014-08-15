@@ -20,7 +20,7 @@
     <% @educations.each_with_index do |education,i| %>
       <tr>
         <td><%= link_to (i+1), education_path(education) %></td>
-        <td><%= education.empno %></td>
+        <td><%= link_to education.empno,education_path(education) %></td>
         <td><%= education.edtype %></td>
         <td><%= education.degyear %></td>
         <td><%= education.deg %></td>

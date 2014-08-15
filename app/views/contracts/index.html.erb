@@ -22,7 +22,7 @@
     <% @contracts.each_with_index do |contract,i| %>
       <tr>
         <td><%= link_to (i+1), contract_path(contract),{class: "link"} %></td>
-        <td><%= contract.empno %></td>
+        <td><%= link_to contract.empno,contract_path(contract) %></td>
         <td><%= contract.htype %></td>
         <td><%= contract.status %></td>
         <td><%= contract.cstart %></td>

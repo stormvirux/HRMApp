@@ -2,7 +2,7 @@ module SearchesHelper
   
   def model_fields
     # which fields to display and sort by
-    [:empno, :first_name, :last_name, :email]
+    [:empno, :first_name, :last_name, :email,:pedate,:iedate,:iqedate,:vedate]
   end
 
   def results_limit

@@ -24,7 +24,7 @@
       <tr>
         <td><%= link_to (i+1), employee_path(employee),{class: "link"} %></td>
         <td><%= employee.empno %></td>
-        <td><%= employee.first_name %></td>
+        <td><%= link_to employee.first_name,employee_path(employee),{class: "link"} %></td>
         <td><%= employee.middle_name %></td>
         <td><%= employee.last_name %></td>
         <td><%= employee.gender %></td>

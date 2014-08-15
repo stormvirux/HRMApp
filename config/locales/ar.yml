@@ -296,6 +296,15 @@ ar:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+  employees:
+    passport: 
+      title: "Passport Details"
+    iqama:
+      title: "Iqama Details"
+    visa:
+      title: "Visa Details"
+    insurance:
+      title: "Insurance Details"
   layouts:
     header:
       home: "بيت"

@@ -13,10 +13,10 @@
 #
 class Document < ActiveRecord::Base
   attr_accessible :empno,:visa,:sig,:passport,:iqama
-  mount_uploader :visa, ImageUploader
-  mount_uploader :sig, ImageUploader
-  mount_uploader :passport, ImageUploader
-  mount_uploader :iqama, ImageUploader
+  mount_uploader :visa, VisaUploader
+  mount_uploader :sig, SigUploader
+  mount_uploader :passport, PassportUploader
+  mount_uploader :iqama, IqamaUploader
 end
 
 

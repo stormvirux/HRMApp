@@ -16,6 +16,7 @@
 
 class Education < ActiveRecord::Base
   attr_accessible :deg, :degyear, :edtype, :empno, :special, :verby, :verified
+  validates :empno, presence: true, uniqueness:{ case_sensitive: false }
   def self.to_csv()
     CSV.generate() do |csv|
       csv << column_names

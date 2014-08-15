@@ -5,26 +5,26 @@
     <%= f.input :middle_name%>
     <%= f.input :last_name%>
     <%= f.input :gender,collection:[[t("helpers.label.employee.male").html_safe,"male"],[t("helpers.label.employee.female").html_safe,"female"]], as: :radio, :class=> 'checkbox inline'%>
-    <%= f.input :dob %>
+    <%= f.input :dob,end_year: Date.today.year,start_year:1900 %>
   </div>
   <div class="control-group">
     <%= f.input :passportno%>
-    <%= f.input :pidate%>
-    <%= f.input :pedate%>
+    <%= f.input :pidate,end_year: Date.today.year,start_year:1960%>
+    <%= f.input :pedate,end_year: Date.today.year+40,start_year:Date.today.year%>
     <%= f.input :iqamano%>
-    <%= f.input :iqidate%>
-    <%= f.input :iqedate%>
+    <%= f.input :iqidate,end_year: Date.today.year,start_year:1960%>
+    <%= f.input :iqedate,end_year: Date.today.year+5,start_year:Date.today.year%>
     <%= f.input :insuranceno%>
-    <%= f.input :iidate %>
-    <%= f.input :iedate %>
+    <%= f.input :iidate,end_year: Date.today.year,start_year:1960 %>
+    <%= f.input :iedate,end_year: Date.today.year+40,start_year:Date.today.year %>
     <%= f.input :visano%>
-    <%= f.input :vidate %>
-    <%= f.input :vedate %>
+    <%= f.input :vidate,end_year: Date.today.year,start_year:1960 %>
+    <%= f.input :vedate,end_year: Date.today.year+10,start_year:Date.today.year %>
   </div>
   <div class="control-group">
     <%= f.input :Marstatus, collection:[[t("helpers.label.employee.single").html_safe ,"single"],[t("helpers.label.employee.married").html_safe ,"married"]],as: :radio_buttons %>
-    <%= f.input :religion,collection:[[t("helpers.label.employee.mus").html_safe ,"muslim"],[t("helpers.label.employee.nmus").html_safe ,"nonmuslim"]] %>
-    <%= f.input :nationality, as: :country %>
+    <%= f.input :religion,collection:[[t("helpers.label.employee.mus").html_safe ,"muslim"],[t("helpers.label.employee.nmus").html_safe ,"nonmuslim"]],include_blank: false %>
+    <%= f.input :nationality, as: :country,include_blank: false %>
     <%= f.input :civstatus%>
     <%= f.input :designation%>
     <%= f.input :department%>

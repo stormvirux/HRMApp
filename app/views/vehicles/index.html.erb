@@ -12,7 +12,6 @@
       <th><%= model_class.human_attribute_name(:dname) %></th>
       <th><%= model_class.human_attribute_name(:nextsdate) %></th>
       <th><%= model_class.human_attribute_name(:remarks) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -20,13 +19,12 @@
     <% @vehicles.each_with_index do |vehicle,i| %>
       <tr>
         <td><%= link_to (i+1), vehicle_path(vehicle) %></td>
-        <td><%= vehicle.reg %></td>
+        <td><%= link_to vehicle.reg,vehicle_path(vehicle) %></td>
         <td><%= vehicle.model %></td>
         <td><%= vehicle.isthiedate %></td>
         <td><%= vehicle.dname %></td>
         <td><%= vehicle.nextsdate %></td>
         <td><%= vehicle.remarks %></td>
-        <td><%=l vehicle.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_vehicle_path(vehicle), :class => 'btn btn-mini' %>
