@@ -298,13 +298,13 @@ ar:
       default_message: "Please review the problems below:"
   employees:
     passport: 
-      title: "Passport Details"
+      title: "تفاصيل جواز السفر"
     iqama:
-      title: "Iqama Details"
+      title: "تفاصيل الإقامة"
     visa:
-      title: "Visa Details"
+      title: "تفاصيل التأشيرة"
     insurance:
-      title: "Insurance Details"
+      title: "تفاصيل التأمين"
   layouts:
     header:
       home: "بيت"
@@ -368,14 +368,14 @@ ar:
       document: "أوراق"
     attributes:
       vehicle:
-        reg: "Reg No" 
-        model: "Model"
-        isthiedate: "Isthimara Expiry"
-        dname: "Driver"
-        nextsdate: "Next Service"
-        remarks: "Remarks"
+        reg: "رقم التسجيل" 
+        model: "موديل"
+        isthiedate: " رخصة مركبة انتهاء"
+        dname: "سائق"
+        nextsdate: "التاريخ خدمة المقبل"
+        remarks: "تصريحات"
       employee:
-        empno: "dont"
+        empno: "رقم الموظفين"
         first_name: "لإسم الأول"
         middle_name: "اسم الأب"
         last_name: "اسم الج"
@@ -403,7 +403,7 @@ ar:
         civstatus: "موظف أو غير موظف"
         Marstatus: "متزوج أم أعزب"
       education:
-        empno: "donot"
+        empno: "رقم الموظفين"
         edtype: "التخصص"
         degyear: "في أي عام"
         deg: "نوع الوظيفة"
@@ -411,7 +411,7 @@ ar:
         verified: "مراجعة ?"
         verby: "مراجعة "
       contract:
-        empno: "dont"
+        empno: "رقم الموظفين"
         htype: "نوع التأجير"
         status: "بداية التأجير"
         cstart: "بداية العقد"
@@ -424,7 +424,7 @@ ar:
         doc: "أوراق"
         edate: "تنتهي في"
       document:
-        empno: "dont"
+        empno: "رقم الموظفين"
         sig: "اختر صورة التوقيع"
         passport: "اختر صورة جواز السفر"
         iqama: "اختر صورة الإقامة"

@@ -6,7 +6,9 @@
         <nav>
           <ul class="nav pull-left">
             <li><%= link_to t("layouts.header.home").html_safe,root_path %></li>
+            <%if false %>
             <li><%= link_to t("layouts.header.help").html_safe,help_path %></li>
+            <%end %>
             <% if signed_in? %>
             <li><%= link_to t("layouts.header.employees").html_safe ,employees_path %></li>
             <li><%= link_to t("layouts.header.educations").html_safe,educations_path %></li>

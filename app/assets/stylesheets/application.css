@@ -25,3 +25,7 @@ padding-right: 0;
 	color: #111 !important;
     background-color: #FFF !important;
 }
+
+.navbar-search .search-query {
+    padding: 6px 6px !important;
+}
