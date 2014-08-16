@@ -35,7 +35,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'jbuilder'
   
 # Use unicorn as the app server
-# gem 'unicorn'
+
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -45,4 +45,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 group :production do
   gem 'pg', '0.12.2'
   gem 'rails_12factor', '0.0.2'
+  gem 'unicorn'
 end
