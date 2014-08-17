@@ -30,7 +30,7 @@ gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-
+#gem 'unicorn'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
   
@@ -45,5 +45,4 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 group :production do
   gem 'pg', '0.12.2'
   gem 'rails_12factor', '0.0.2'
-  gem 'unicorn'
 end
