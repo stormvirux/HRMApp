@@ -32,6 +32,7 @@
     <%= f.input :exp%>
     <%= f.input :email,placeholder:'user@domain.com'%>
   </div>
+  <% if false %>
   <div class="control-group">
 
     <div class="attach-set">
@@ -39,7 +40,7 @@
       <%= f.file_field :image, label: "Select image" %>
     </div>
   </div>  
-
+  <% end %>
   <div class="form-actions">
     <%= f.button :submit ,:class => 'btn btn-primary'%>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),employees_path, :class => 'btn' %>

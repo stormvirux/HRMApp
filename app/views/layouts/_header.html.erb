@@ -23,7 +23,9 @@
                 <li><%= link_to t("layouts.header.iqama").html_safe,iqama_path%></li>
                 <li><%= link_to t("layouts.header.insurance").html_safe,insurance_path%></li>
                 <li><%= link_to t("layouts.header.visa").html_safe,visa_path%></li>
+                <% if false %>
                 <li><%= link_to t("layouts.header.upload").html_safe,documents_path%></li>
+                <% end %>
               </ul>
             </li>
             <li><%= link_to t("layouts.header.vehicles").html_safe ,vehicles_path %></li>
