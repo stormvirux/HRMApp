@@ -114,7 +114,7 @@ class EmployeesController < ApplicationController
   end
 
   def search
-    @employees=Employee.search params[:keyword]
+    @employees=Employee.search(params[:keyword].downcase)
     respond_to do |format|
       format.html # index.html.erb
       format.csv { render text: @employees.to_csv }
