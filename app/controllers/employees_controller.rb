@@ -77,10 +77,15 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1.json
   def destroy
     @employee = Employee.find(params[:id])
-    @contract = Contract.find(params[:id])
-    @education = Education.find(params[:id])
-    @education.destroy
-    @contract.destroy
+    @empno=@employee.empno
+    @education = Education.find_by_empno(params[:empno]) #if @empno.present?
+    if @education
+      @education.destroy
+    end
+    @contract = Contract.find_by_empno(params[:empno])
+    if @contract
+      @contract.destroy
+    end
     @employee.destroy
     respond_to do |format|
       format.html { redirect_to employees_url }
