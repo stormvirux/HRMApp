@@ -8,6 +8,7 @@
     <tr>
       <th>S#</th>
       <th><%= model_class.human_attribute_name(:empno) %></th>
+      <th><%= model_class.human_attribute_name(:first_name) %></th>
       <th><%= model_class.human_attribute_name(:iqamano) %></th>
       <th><%= model_class.human_attribute_name(:iqidate) %></th>
       <th><%= model_class.human_attribute_name(:iqedate) %></th>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= link_to (i+1), employee_path(employee),{class: "link"} %></td>
         <td><%= employee.empno %></td>
+        <td><%= link_to employee.first_name, employee_path(employee),{class: "link"} %></td>
         <td><%= employee.iqamano %></td>
         <td><%= employee.iqidate %></td>
         <td><%= employee.iqedate %></td>
