@@ -4,8 +4,10 @@
 </div>
 
 <dl class="dl-horizontal">
+  <% if false %>
   <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
   <dd><%= image_tag @employee.image_url.to_s %></dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:empno) %>:</strong></dt>
   <dd><%= @employee.empno %></dd>
   <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
