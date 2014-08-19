@@ -18,7 +18,7 @@ module SearchesHelper
     if count > results_limit
       "Your first #{results_limit} results out of #{count} total"
     else
-      "Your #{pluralize(count, 'result')}"
+      "You have #{pluralize(count, 'result')}"
     end
   end
 

@@ -31,7 +31,7 @@ class SearchesController < ApplicationController
 
     respond_to do |format|
       if @search.save
-        format.html { redirect_to @search, notice: 'Search was successfull.' }
+        format.html { redirect_to @search, notice: 'Search was performed.' }
         format.json { render json: @search, status: :created, location: @search }
       else
         format.html { render action: "new" }
