@@ -61,7 +61,7 @@ class Employee < ActiveRecord::Base
 
   def self.search(keyword)
     search_condition="%"+ keyword +"%"
-    find(:all,:conditions =>['first_name LIKE ? OR email LIKE ?',search_condition,search_condition])
+    find(:all,:conditions =>['first_name ILIKE ? OR email ILIKE ?',search_condition,search_condition])
 
   end 
 end
