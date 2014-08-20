@@ -30,9 +30,6 @@ GEM
       multi_json (~> 1.0)
     annotate (2.4.1.beta1)
     arel (3.0.3)
-    attachinary (1.3.0)
-      cloudinary (~> 1.0.69)
-      rails (>= 3.2)
     aws_cf_signer (0.1.3)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.0.0)
@@ -158,7 +155,6 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
-  attachinary
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (= 2.0.0)
   carrierwave

@@ -50,9 +50,7 @@ class Employee < ActiveRecord::Base
   validates :vedate, presence: true
   validates  :vidate, presence: true
   validates  :visano, presence: true
-  #mount_uploader :image, ImageUploader
-  #has_attachment :image, accept: [:jpg, :png,:jpeg]
-  #validates :image, presence: true
+  mount_uploader :image, ImageUploader
   def self.to_csv()
     CSV.generate() do |csv|
       csv << column_names

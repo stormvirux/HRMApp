@@ -15,7 +15,6 @@ gem 'simple_form'
 gem 'country_select'
 gem'carrierwave'
 gem 'cloudinary'
-gem 'attachinary'
 gem 'rmagick'
 
 # Gems used only for assets and not required
