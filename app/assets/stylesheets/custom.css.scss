@@ -158,3 +158,22 @@ a:hover{
     color: #34DDDD;
     text-decoration: none;
 }
+
+.btn-print {
+    border-radius: 0 !important;
+    background-repeat: repeat-x; 
+    background-image: none;
+    border:none;
+    color: #fff;
+    text-decoration: none ! important;
+    text-shadow: none;
+    float: right;
+    background: transparent;
+    padding: 0;
+
+
+}
+
+.glyphicon{
+ float:right !important;
+}

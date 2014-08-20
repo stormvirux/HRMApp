@@ -15,11 +15,11 @@
 </head>
 <body>
   <div id="wrap">
-    <span id="print">
-      <%= link_to_function("Print","javascript:print()",:class => 'btn btn-primary')%>
-    </span>
     <div id="main" class="container clear-top">
       <%= render 'layouts/header' %>
+      <div class="lol">
+        <%= link_to_function(raw("<span class='glyphicon glyphicon-print'></span>Print This page &nbsp"),"javascript:print()",:class => 'btn btn-primary btn-print') %>
+    </div>
         <div class="container">
           <% flash.each do |key, value| %>
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>

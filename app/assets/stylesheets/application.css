@@ -29,4 +29,12 @@ padding-right: 0;
 .navbar-search .search-query {
     padding: 6px 6px !important;
 }
-
+.btn-print {
+    border-radius: 0 !important;
+    background-repeat: repeat-x; 
+    background-image: none;
+    border:none;
+    color: #fff;
+    text-decoration: none ! important;
+    text-shadow: none;
+}
