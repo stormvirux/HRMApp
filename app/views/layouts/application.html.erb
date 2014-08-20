@@ -2,7 +2,8 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => :all %>
+  <%= stylesheet_link_tag "print", :media => :print %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">-->
@@ -14,6 +15,9 @@
 </head>
 <body>
   <div id="wrap">
+    <span id="print">
+      <%= link_to_function("Print","javascript:print()",:class => 'btn btn-primary')%>
+    </span>
     <div id="main" class="container clear-top">
       <%= render 'layouts/header' %>
         <div class="container">
