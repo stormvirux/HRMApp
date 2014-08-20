@@ -178,37 +178,4 @@ a:hover{
  float:right !important;
 }
 
-@media print
-{ .navbar{
-    border:0;
-    overflow:hidden;
-    display:none
-  }
-  title{
-    display:none;
-    border:0;
-  }
-  .footer{
-    display:none;
-    border:0;
-  }
-  table td:last-child {display:none}
-  table th:last-child {display:none}
-  a[href]:after {
-    content: none !important;
-    }
-  .form-actions{
-    display:none;
-  }
-  body {
-  font-family: Georgia, serif;
-  background: none;
-  color: black;
-  }
-  @page 
-        {
-            size: auto;   /* auto is the current printer page size */
-            margin: 0mm;  /* this affects the margin in the printer settings */
-        }
 
-}
