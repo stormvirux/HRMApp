@@ -26,7 +26,6 @@ HrsiteNew::Application.routes.draw do
 #  resources :searches,only: [:new,:create,:show]
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   match '', to: redirect("/#{I18n.default_locale}")
-  mount Attachinary::Engine => "/attachinary"
 
   #get "static_pages/home"
 
