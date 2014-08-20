@@ -6,10 +6,11 @@
 <dl class="dl-horizontal">
 
   <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
-  <dd><%= cl_image_tag(@employee.image.path,:width => 150, :height => 200,) %></dd>
   <% if false %>
-  <dd><%= image_tag @employee.image.url.to_s %></dd>
+  <dd><%= cl_image_tag(@employee.image.path,:width => 150, :height => 200,) %></dd>
   <% end %>
+  <dd><%= image_tag @employee.image.url.to_s %></dd>
+  
   <dt><strong><%= model_class.human_attribute_name(:empno) %>:</strong></dt>
   <dd><%= @employee.empno %></dd>
   <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
