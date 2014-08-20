@@ -2,6 +2,7 @@
 <%= simple_form_for @document, :html => {:multipart => true ,:class => 'form-horizontal' } do |f| %>
    <div class="control-group">
     <%= f.input :empno,collection: Employee.all,label_method: :empno,value_method: :empno,:include_blank => false,label: "Employee No"%>
+  <% if false %>
   <div class="attach-set">
       <%= f.label model_class.human_attribute_name(:sig)%> &nbsp
       <%= f.attachinary_file_field :sig %>
@@ -18,6 +19,7 @@
       <%= f.label model_class.human_attribute_name(:visa)%> &nbsp
       <%= f.attachinary_file_field :visa %>
   </div> 
+  <% end %>
 
   <div class="form-actions">
     <%= f.button :submit ,:class => 'btn btn-primary'%>

@@ -10,14 +10,14 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require attachinary
+// require attachinary
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.widget
-//= require jquery.iframe-transport
-//= require jquery.fileupload
-//= require cloudinary
-//= require cloudinary/jquery.cloudinary
+// require jquery.ui.widget
+// require jquery.iframe-transport
+// require jquery.fileupload
+// require cloudinary
+// require cloudinary/jquery.cloudinary
 //= require twitter/bootstrap
 //= require_tree .
 

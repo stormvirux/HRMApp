@@ -17,10 +17,10 @@ class Document < ActiveRecord::Base
   #mount_uploader :sig, SigUploader
   #mount_uploader :passport, PassportUploader
   #mount_uploader :iqama, IqamaUploader
-  has_attachment :sig, accept: [:jpg, :png,:jpeg]
-  has_attachment :passport, accept: [:jpg, :png,:jpeg]
-  has_attachment :iqama, accept: [:jpg, :png,:jpeg]
-  has_attachment :visa, accept: [:jpg, :png,:jpeg]
+  #has_attachment :sig, accept: [:jpg, :png,:jpeg]
+  #has_attachment :passport, accept: [:jpg, :png,:jpeg]
+  #has_attachment :iqama, accept: [:jpg, :png,:jpeg]
+  #has_attachment :visa, accept: [:jpg, :png,:jpeg]
 end
 
 
