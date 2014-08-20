@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hrmapp
+  api_key: '286946521869315'
+  api_secret: FGKXww58aKZyYSfKlXwhHvzF_4Y
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hrmapp
+  api_key: '286946521869315'
+  api_secret: FGKXww58aKZyYSfKlXwhHvzF_4Y
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hrmapp
+  api_key: '286946521869315'
+  api_secret: FGKXww58aKZyYSfKlXwhHvzF_4Y
+  enhance_image_tag: true
+  static_image_support: false
