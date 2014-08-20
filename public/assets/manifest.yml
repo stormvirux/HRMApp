@@ -41,8 +41,8 @@ word-cloud.jpg: word-cloud-5c6f819b57bec6bc3e00278ff36c3958.jpg
 word-cloud/index.jpg: word-cloud-5c6f819b57bec6bc3e00278ff36c3958.jpg
 application.js: application-7808e406d12c29f338d757b157827527.js
 application/index.js: application-7808e406d12c29f338d757b157827527.js
-application.css: application-d513b6bee1c1f3e968c6df5bf98a61fe.css
-application/index.css: application-d513b6bee1c1f3e968c6df5bf98a61fe.css
+application.css: application-876d43d65fa2ed2901eb8580f254a078.css
+application/index.css: application-876d43d65fa2ed2901eb8580f254a078.css
 jquery.min.map: jquery.min-e146c025d6a36461812bc97143056bd3.map
 jquery/index.min.map: jquery.min-e146c025d6a36461812bc97143056bd3.map
 cloudinary_cors.html: cloudinary_cors-05f2af4874bd3914c79b03b8d9acd6d1.html
