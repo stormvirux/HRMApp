@@ -15,7 +15,8 @@ gem 'simple_form'
 gem 'country_select'
 gem'carrierwave'
 gem 'cloudinary'
-gem 'rmagick'
+gem 'attachinary'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -28,7 +29,8 @@ group :assets do
   gem 'uglifier', '>= 1.2.3'
 end
 
-gem 'jquery-rails'
+#gem 'jquery-rails'
+gem "jquery-rails", "~> 2.3.0"
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

@@ -36,8 +36,11 @@
 
     <div class="attach-set">
       <%= f.label t("helpers.label.employee.image").html_safe %> &nbsp
-      <%= f.hidden_field :image_cache%>
-      <%= f.file_field :image, label: "Select image" %>
+      <% if false %>
+        <%= f.hidden_field :image_cache%>
+        <%= f.file_field :image, label: "Select image" %>
+      <% end %>
+      <%= f.attachinary_file_field :image %>
     </div>
   </div>  
   <div class="form-actions">

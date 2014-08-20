@@ -7,13 +7,25 @@
   <dt><strong><%= model_class.human_attribute_name(:empno) %>:</strong></dt>
   <dd><%= @document.empno %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sig) %>:</strong></dt>
+  <dd><%= cl_image_tag(@document.sig.path,:width => 100, :height => 100,) %></dd> 
+  <% if false %>
   <dd><%= image_tag @document.sig_url.to_s %></dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:passport) %>:</strong></dt>
+  <dd><%= cl_image_tag(@document.passport.path,:width => 500, :height => 500,) %></dd> 
+  <% if false %>
   <dd><%= image_tag @document.passport_url.to_s %></dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:iqama) %>:</strong></dt>
+  <dd><%= cl_image_tag(@document.iqama.path,:width => 500, :height => 500,) %></dd> 
+  <% if false %>
   <dd><%= image_tag @document.iqama_url.to_s %></dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:visa) %>:</strong></dt>
+  <dd><%= cl_image_tag(@document.visa.path,:width => 500, :height => 500,) %></dd> 
+  <% if false %>
   <dd><%= image_tag @document.visa_url.to_s %></dd>
+  <% end %>
 </dl>
 
 <div class="form-actions">
