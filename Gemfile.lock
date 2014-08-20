@@ -165,7 +165,7 @@ DEPENDENCIES
   cloudinary
   coffee-rails (~> 3.2.2)
   country_select
-  jquery-rails (~> 2.3.0)
+  jquery-rails
   less-rails
   pg (= 0.12.2)
   rails (= 3.2.16)
