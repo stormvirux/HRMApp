@@ -1,0 +1,11 @@
+/*
+ * jQuery Iframe Transport Plugin 1.7
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2011, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+!function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"],e):e(window.jQuery)}(function(e){"use strict";var t=0;e.ajaxTransport("iframe",function(n){if(n.async){var i,r,o;return{send:function(a,s){i=e('<form style="display:none;"></form>'),i.attr("accept-charset",n.formAcceptCharset),o=/\?/.test(n.url)?"&":"?","DELETE"===n.type?(n.url=n.url+o+"_method=DELETE",n.type="POST"):"PUT"===n.type?(n.url=n.url+o+"_method=PUT",n.type="POST"):"PATCH"===n.type&&(n.url=n.url+o+"_method=PATCH",n.type="POST"),t+=1,r=e('<iframe src="javascript:false;" name="iframe-transport-'+t+'"></iframe>').bind("load",function(){var t,o=e.isArray(n.paramName)?n.paramName:[n.paramName];r.unbind("load").bind("load",function(){var t;try{if(t=r.contents(),!t.length||!t[0].firstChild)throw new Error}catch(n){t=void 0}s(200,"success",{iframe:t}),e('<iframe src="javascript:false;"></iframe>').appendTo(i),window.setTimeout(function(){i.remove()},0)}),i.prop("target",r.prop("name")).prop("action",n.url).prop("method",n.type),n.formData&&e.each(n.formData,function(t,n){e('<input type="hidden"/>').prop("name",n.name).val(n.value).appendTo(i)}),n.fileInput&&n.fileInput.length&&"POST"===n.type&&(t=n.fileInput.clone(),n.fileInput.after(function(e){return t[e]}),n.paramName&&n.fileInput.each(function(t){e(this).prop("name",o[t]||n.paramName)}),i.append(n.fileInput).prop("enctype","multipart/form-data").prop("encoding","multipart/form-data")),i.submit(),t&&t.length&&n.fileInput.each(function(n,i){var r=e(t[n]);e(i).prop("name",r.prop("name")),r.replaceWith(i)})}),i.append(r).appendTo(document.body)},abort:function(){r&&r.unbind("load").prop("src","javascript".concat(":false;")),i&&i.remove()}}}}),e.ajaxSetup({converters:{"iframe text":function(t){return t&&e(t[0].body).text()},"iframe json":function(t){return t&&e.parseJSON(e(t[0].body).text())},"iframe html":function(t){return t&&e(t[0].body).html()},"iframe xml":function(t){var n=t&&t[0];return n&&e.isXMLDoc(n)?n:e.parseXML(n.XMLDocument&&n.XMLDocument.xml||e(n.body).html())},"iframe script":function(t){return t&&e.globalEval(e(t[0].body).text())}}})});
