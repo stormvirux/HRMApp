@@ -18,7 +18,9 @@
     <div id="main" class="container clear-top">
       <%= render 'layouts/header' %>
       <div class="lol">
-        <%= link_to_function(raw("<span class='glyphicon glyphicon-print'></span>Print This page &nbsp"),"javascript:print()",:class => 'btn btn-primary btn-print') %>
+        <% if signed_in? %>
+          <%= link_to_function(raw("<span class='glyphicon glyphicon-print'></span>Print This page &nbsp"),"javascript:print()",:class => 'btn btn-primary btn-print') %>
+        <% end %>
     </div>
         <div class="container">
           <% flash.each do |key, value| %>
