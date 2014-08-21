@@ -111,13 +111,19 @@ margin-left: 10px;
     color: #34DDDD;
     text-decoration: none;
 }
+a .btn{
+    background-color: transparent;
+    color: #222;
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: transparent;
+    color: #222;
+    text-decoration: none;
+}
 a:hover{
 color: #222;
 text-decoration: none;
   background-color: transparent;
-}
-a{
-    background-color: transparent;
-    color: #34DDDD;
-    text-decoration: none;
 }

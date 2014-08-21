@@ -1,10 +1,23 @@
-<div class="table table-striped">
+
 <%= content_tag :h2, display_results_header(@search.employees.size) %>
-<%= content_tag :table do %>
-<%= content_tag :thead, display_sort_column_headers(@search), nil, false %>
-<%= content_tag :tbody, display_search_results(@search.employees), nil, false %>
+<% if false %>
+ <%= content_tag :table do %>
+ <%= content_tag :thead, display_sort_column_headers(@search), nil, false %>
+ <% end %>
 <% end %>
-</div>
+<table class="table table-striped">
+  <thead>
+  	<th>Empno</th>
+  	<th>First Name</th>
+  	<th>Last Name</th>
+  	<th>Email</th>
+  	<th>Passport Expiry</th>
+  	<th>Insurance Expiry</th>
+  	<th>Iqama Expiry</th>
+  	<th>Visa Expiry</th>
+  </thead>
+<%= content_tag :tbody, display_search_results(@search.employees), nil, false %>
+</table>
 <div class="form-actions">
 <%= link_to 'Back',new_search_path,:class => 'btn btn-mini' %>
 <%= link_to "To Excel",search_path(params.merge(format: 'xls')),:class => 'btn btn-mini' %>

@@ -11,7 +11,6 @@ HrsiteNew::Application.routes.draw do
     resources :searches ,only: [:new,:create,:show]
     root to: 'static_pages#home', :constraints => AuthenticatedUser.new(true)
     root to: 'sessions#new', :constraints => AuthenticatedUser.new(false)
-    match '/expshow', to: "expiry#expshow"
     match '/help', to: 'static_pages#help'
     match '/docshow', to: 'employees#docshow'
     match '/passport', to: 'employees#passport'
