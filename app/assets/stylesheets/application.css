@@ -38,3 +38,6 @@ padding-right: 0;
     text-decoration: none ! important;
     text-shadow: none;
 }
+a .btn{color: #fff !important;}
+a .btn:visited {color: #fff !important;}
+a .btn-primary:visited {color: #fff !important;}

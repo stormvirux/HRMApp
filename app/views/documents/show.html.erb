@@ -2,19 +2,32 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:empno) %>:</strong></dt>
-  <dd><%= @document.empno %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:sig) %>:</strong></dt>
-  <dd><% unless @document.sig_url.nil? %><%= image_tag @document.sig_url(:display) %><br /><% end %> </dd>
-  <dt><strong><%= model_class.human_attribute_name(:passport) %>:</strong></dt>
-  <dd><% unless @document.passport_url.nil? %><%= image_tag @document.passport_url(:display) %><br /><% end %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:iqama) %>:</strong></dt>
-  <dd><% unless @document.iqama_url.nil? %><%= image_tag @document.iqama_url(:display) %><br /><% end %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:visa) %>:</strong></dt>
-  <dd><% unless @document.visa_url.nil? %><%= image_tag @document.visa_url(:display) %><br /><% end %></dd>
-</dl>
+<br/>
+<br/>
+  <h5>Document Details</h5>
+  <br/>
+<table class="table table-striped">
+  <tr>
+    <td><%= model_class.human_attribute_name(:empno) %></td>
+    <td><%= @document.empno %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:sig) %></td>
+    <td><% unless @document.sig_url.nil? %><%= image_tag @document.sig_url(:display) %><% end %> </td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:passport) %></td>
+    <td><% unless @document.passport_url.nil? %><%= image_tag @document.passport_url(:display) %><% end %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:iqama) %></td>
+    <td><% unless @document.iqama_url.nil? %><%= image_tag @document.iqama_url(:display) %><% end %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:visa) %></td>
+    <td><% unless @document.visa_url.nil? %><%= image_tag @document.visa_url(:display) %><% end %></td>
+  </tr>
+</table>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

@@ -2,27 +2,48 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:empno) %>:</strong></dt>
-  <dd><%= @contract.empno %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:htype) %>:</strong></dt>
-  <dd><%= @contract.htype %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
-  <dd><%= @contract.status %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:cstart) %>:</strong></dt>
-  <dd><%= @contract.cstart %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:cend) %>:</strong></dt>
-  <dd><%= @contract.cend %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:pstart) %>:</strong></dt>
-  <dd><%= @contract.pstart %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:pend) %>:</strong></dt>
-  <dd><%= @contract.pend %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nameiqama) %>:</strong></dt>
-  <dd><%= @contract.nameiqama %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:proiqama) %>:</strong></dt>
-  <dd><%= @contract.proiqama %></dd>
-</dl>
+<br/>
+<br/>
+  <h5>Contract Details</h5>
+  <br/>
+<table class="table table-striped">
+  <tr>
+    <td><%= model_class.human_attribute_name(:empno) %></td>
+    <td><%= @contract.empno %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:htype) %></td>
+    <td><%= @contract.htype %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:status) %></td>
+    <td><%= @contract.status %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:cstart) %></td>
+    <td><%= @contract.cstart %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:cend) %></td>
+    <td><%= @contract.cend %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:pstart) %></td>
+    <td><%= @contract.pstart %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:pend) %></td>
+    <td><%= @contract.pend %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:nameiqama) %></td>
+    <td><%= @contract.nameiqama %></td>
+  </tr>
+  <tr>
+    <td><%= model_class.human_attribute_name(:proiqama) %></td>
+    <td><%= @contract.proiqama %></td>
+</tr>
+</table>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

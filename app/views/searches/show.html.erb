@@ -1,10 +1,13 @@
-
+<div class="page-header">
 <%= content_tag :h2, display_results_header(@search.employees.size) %>
+</div>
 <% if false %>
  <%= content_tag :table do %>
  <%= content_tag :thead, display_sort_column_headers(@search), nil, false %>
  <% end %>
 <% end %>
+<br/>
+<br/>
 <table class="table table-striped">
   <thead>
   	<th>Empno</th>

@@ -2,23 +2,41 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
+<br/>
+<br/>
+  <h5>Education Details</h5>
+  <br/>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:empno) %>:</strong></dt>
-  <dd><%= @education.empno %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:edtype) %>:</strong></dt>
-  <dd><%= @education.edtype %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:degyear) %>:</strong></dt>
-  <dd><%= @education.degyear %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:deg) %>:</strong></dt>
-  <dd><%= @education.deg %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:special) %>:</strong></dt>
-  <dd><%= @education.special %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:verified) %>:</strong></dt>
-  <dd><%= @education.verified %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:verby) %>:</strong></dt>
-  <dd><%= @education.verby %></dd>
-</dl>
+<table class="table table-striped">
+  <tr>
+    <td> <%= model_class.human_attribute_name(:empno) %> </td>
+    <td><%= @education.empno %></td>
+  </tr>
+  <tr>
+    <td> <%= model_class.human_attribute_name(:etdype) %> </td>
+    <td><%= @education.edtype %></td>
+  </tr>
+  <tr>
+    <td> <%= model_class.human_attribute_name(:degyear) %> </td>
+    <td><%= @education.degyear %></td>
+  </tr>
+  <tr>
+    <td> <%= model_class.human_attribute_name(:deg) %> </td>
+    <td><%= @education.deg %></td>
+  </tr>
+  <tr>
+    <td> <%= model_class.human_attribute_name(:special) %> </td>
+    <td><%= @education.special %></td>
+  </tr>
+  <tr>
+    <td> <%= model_class.human_attribute_name(:verified) %></td>
+    <td><%= @education.verified %></td>
+  </tr>
+  <tr>
+    <td> <%= model_class.human_attribute_name(:verby) %> </td>
+    <td><%= @education.verby %></td>
+</tr>
+</table>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
