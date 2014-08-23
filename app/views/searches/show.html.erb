@@ -8,8 +8,9 @@
 <% end %>
 <br/>
 <br/>
-<table class="table table-striped">
+<table class="table table-striped lol">
   <thead>
+    <th>Id</th>
   	<th>Empno</th>
   	<th>First Name</th>
   	<th>Last Name</th>
@@ -18,6 +19,7 @@
   	<th>Insurance Expiry</th>
   	<th>Iqama Expiry</th>
   	<th>Visa Expiry</th>
+    <th>Gender</th>
   </thead>
 <%= content_tag :tbody, display_search_results(@search.employees), nil, false %>
 </table>

@@ -13,7 +13,8 @@
     border:0;
   }
   table td:last-child {display:none}
-  table th:last-child {display:none}
+  table th:last-child {display:none} 
+
   a[href]:after {
     content: none !important;
     }

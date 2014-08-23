@@ -43,6 +43,7 @@ en:
       title: "Search"
   documents:
       title: "Documents"
+      name: "Full Name"
   activerecord:
     attributes:
       vehicle:
@@ -102,7 +103,7 @@ en:
         doc: "The document"
         edate: "Expiring within"
       document:
-        empno: "dont"
+        empno: "Employee No"
         sig: "Select Signature"
         passport: "Select Passport"
         iqama: "Select Iqama"

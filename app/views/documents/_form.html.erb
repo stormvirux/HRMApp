@@ -1,7 +1,7 @@
 <%- model_class = Document -%>
 <%= simple_form_for @document, :html => {:multipart => true ,:class => 'form-horizontal' } do |f| %>
    <div class="control-group">
-    <%= f.input :empno,collection: Employee.all,label_method: :empno,value_method: :empno,:include_blank => false,label: "Employee No"%>
+    <%= f.input :empno,collection: Employee.all,label_method: :empname,value_method: :empno,:include_blank => false,label: "Employee No"%>
   <div class="attach-set">
       <%= f.label model_class.human_attribute_name(:sig)%> &nbsp
       <%= f.file_field :sig %>

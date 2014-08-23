@@ -2,12 +2,12 @@ module SearchesHelper
   
   def model_fields
     # which fields to display and sort by
-    [:empno, :first_name, :last_name, :email,:pedate,:iedate,:iqedate,:vedate]
+    [:id,:empno, :first_name, :last_name, :email,:pedate,:iedate,:iqedate,:vedate,:gender]
   end
 
   def results_limit
     # max number of search results to display
-    10
+    100
   end
 
   def display_query_sql(employee)
@@ -39,10 +39,33 @@ module SearchesHelper
   end
 
   def display_search_results_row(object)
+    lol=model_fields
+    id=lol[0]
+    pass=lol[5]
+    emp=lol[1]
+    empl=0
+    idl=0
+    ide=0
     model_fields.each_with_object('') do |field, string|
-      string << content_tag(:td, object.send(field))
+      if field==id
+        string << content_tag(:td,content_tag(:a,object.send(field),:href=>employee_path(object.send(field))))
+        ide=object.send(field)
+      elsif field==emp
+        string << content_tag(:td,content_tag(:a,object.send(field),:href=>employee_path(ide)))
+        empl=object.send(field)
+      elsif field==pass
+        idl=find_passport_id(empl)
+        print idl
+        string << content_tag(:td,content_tag(:a,object.send(field),:href=>document_path(idl)))
+      else
+        string << content_tag(:td,object.send(field))
+      end
     end
     .html_safe
+  end
+
+  def find_passport_id(empl)
+    Document.find(:all,:select => "id",:conditions =>['empno ILIKE ? ',empl])
   end
 
 end

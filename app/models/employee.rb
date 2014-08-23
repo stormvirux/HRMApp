@@ -59,6 +59,14 @@ class Employee < ActiveRecord::Base
       end
     end
   end
+  
+  def empname
+    "#{self.first_name} #{self.last_name} (#{self.empno})"
+  end
+
+  def fullname
+    "#{self.first_name} #{self.last_name}"
+  end
 
   def self.search(keyword)
     search_condition="%"+ keyword +"%"
