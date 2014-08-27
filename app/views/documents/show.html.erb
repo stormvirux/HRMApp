@@ -15,22 +15,22 @@
   <tr>
     <td><%= model_class.human_attribute_name(:sig) %></td>
     <td><% unless @document.sig_url.nil? %><%= image_tag @document.sig_url(:display) %> </td>
-    <td><%= link_to "Save",@document.sig_url(:display), :class => 'btn' %><% end %></td>
+    <td><%= link_to "Save",@document.sig_url(:display), :class => 'btn',:target => "_blank"%><% end %></td>
   </tr>
   <tr>
     <td><%= model_class.human_attribute_name(:passport) %></td>
     <td><% unless @document.passport_url.nil? %><%= image_tag @document.passport_url(:display) %></td>
-    <td><%= link_to "Save",@document.passport_url(:display), :class => 'btn'  %><% end %></td>
+    <td><%= link_to "Save",@document.passport_url(:display), :class => 'btn',:target => "_blank"  %><% end %></td>
   </tr>
   <tr>
     <td><%= model_class.human_attribute_name(:iqama) %></td>
     <td><% unless @document.iqama_url.nil? %><%= image_tag @document.iqama_url(:display) %></td>
-    <td><%= link_to "Save",@document.iqama_url(:display), :class => 'btn'  %><% end %></td>
+    <td><%= link_to "Save",@document.iqama_url(:display), :class => 'btn',:target => "_blank"  %><% end %></td>
   </tr>
   <tr>
     <td><%= model_class.human_attribute_name(:visa) %></td>
     <td><% unless @document.visa_url.nil? %><%= image_tag @document.visa_url(:display) %></td>
-    <td><%= link_to "Save",@document.visa_url(:display), :class => 'btn btn-primary'  %><% end %></td>
+    <td><%= link_to "Save",@document.visa_url(:display), :class => 'btn btn-primary',:target => "_blank" %><% end %></td>
   </tr>
 </table>
 
