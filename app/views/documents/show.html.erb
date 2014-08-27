@@ -30,7 +30,7 @@
   <tr>
     <td><%= model_class.human_attribute_name(:visa) %></td>
     <td><% unless @document.visa_url.nil? %><%= image_tag @document.visa_url(:display) %></td>
-    <td><%= link_to "Save",@document.visa_url(:display), :class => 'btn btn-primary',:target => "_blank" %><% end %></td>
+    <td><%= link_to "Save",@document.visa_url(:display), :class => 'btn',:target => "_blank" %><% end %></td>
   </tr>
 </table>
 
