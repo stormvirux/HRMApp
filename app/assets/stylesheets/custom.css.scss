@@ -179,3 +179,42 @@ input {
     color: #34DDDD !important;
     text-decoration: !important;
 }
+.navbar .nav > li > a {
+    color: #FFF !important;
+    text-decoration: none;
+    padding: 10px 10px 11px !important;
+    line-height: 28px !important;
+    font-size: 12px !important;
+}
+.navbar .nav > li > a:hover {
+    color: #FFF !important;
+    text-decoration: none;
+    background-color: #32A0DF !important;
+}
+.navbar-inverse .navbar-inner {
+    background-repeat: repeat-x;
+    border-color: #25B1F7;
+    background-image: none;
+    background-color: #25B1F7;
+}
+body {
+    font-family:"Telex",sans-serif, verdana,arial,helvetica !important;
+}
+.navbar .nav > li {
+    color: #25B1F7; 
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #32A0DF !important;
+    color: #FFF;
+}
+.navbar-inner {
+    min-height: 50px !important;
+}
+
+.navbar .nav .dropdown-toggle .caret {
+    margin-top: 12px !important;
+}
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
+    border-top-color: #FFF;
+    border-bottom-color: #FFF;
+}

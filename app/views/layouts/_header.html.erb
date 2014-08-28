@@ -1,8 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
+      <% if false%>
         <%= link_to image_tag("palback_w.jpeg",alt: "Palmate"),"http://www.palmate.in", id: "logo" %>
-        <%= link_to image_tag("palback1.jpg",alt: "Palmate"),"http://www.palmate.in", id: "logo" %>
+      <% end %>
+        <%= link_to image_tag("Untitled.jpeg",alt: "Palmate"),"http://www.palmate.in", id: "logo" %>
         <nav>
           <ul class="nav pull-left">
             <li><%= link_to t("layouts.header.home").html_safe,root_path %></li>
@@ -40,11 +42,12 @@
               </ul>
             </li>
           <% end %>
+          </ul>
+        
+          <ul class="nav pull-right">
             <li>  <%= link_to_unless_current t("layouts.header.english").html_safe, locale: "en" %></li>
             <li>  <%= link_to_unless_current t("layouts.header.arabic").html_safe, locale: "ar" %></li>
-          </ul>
-          <% if signed_in? %>
-          <ul class="nav pull-right">  
+           <% if signed_in? %>  
             <%= form_tag find_path,:controller => 'employees',:method => :get,:action => 'search',:class => 'navbar-search pull-right' do %>
               <%= text_field_tag :keyword,params[:keyword],:id => 'search_field' ,class: "search-query",placeholder: "Search" %>
             <%end%>
