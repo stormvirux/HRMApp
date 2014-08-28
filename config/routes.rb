@@ -9,6 +9,7 @@ HrsiteNew::Application.routes.draw do
     resources :vehicles
     resources :documents
     resources :searches ,only: [:new,:create,:show]
+    resources :users ,only:[:new,:create,:update]
     root to: 'static_pages#home', :constraints => AuthenticatedUser.new(true)
     root to: 'sessions#new', :constraints => AuthenticatedUser.new(false)
     match '/help', to: 'static_pages#help'

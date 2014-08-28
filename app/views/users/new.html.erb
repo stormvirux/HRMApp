@@ -1,0 +1,17 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= simple_form_for(@user) do |f| %>
+    <div class="control-group">
+      <%= f.input :name %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+
+      <%= f.submit "Create User", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -34,7 +34,7 @@
                 <%= t("layouts.header.accounts").html_safe %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to t("layouts.header.settings").html_safe, "#"%></li>
+                <li><%= link_to t("layouts.header.settings").html_safe,new_user_path%></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to t("layouts.header.signout").html_safe, signout_path, method: "delete" %>
