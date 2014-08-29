@@ -77,14 +77,17 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1.json
   def destroy
     @employee = Employee.find(params[:id])
-    @empno=@employee.empno
-    @education = Education.find_by_empno(params[:empno]) #if @empno.present?
+    @education = Education.find_by_empno(@employee.empno) 
     if @education
       @education.destroy
     end
-    @contract = Contract.find_by_empno(params[:empno])
+    @contract = Contract.find_by_empno(@employee.empno)
     if @contract
       @contract.destroy
+    end
+    @document = Document.find_by_empno(@employee.empno)
+    if @document
+      @document.destroy
     end
     @employee.destroy
     respond_to do |format|
