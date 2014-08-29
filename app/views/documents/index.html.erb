@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to (i+1), document_path(document),{class: "link"} %></td>
         <td><%= link_to document.empno,document_path(document),{class: "link"} %></td>
-        <td><% unless document.empno.nil? %><%= Employee.find_by_empno(document.empno).send(:fullname) %><% end %></td>
+        <td><% if document.empno %><%= Employee.find_by_empno(document.empno).send(:fullname) %><% end %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_document_path(document), :class => 'btn btn-mini' %>
